@@ -1,0 +1,28 @@
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+
+task fatJar(type: Jar) {
+    description = 'Generates compiler executable.'
+    manifest {
+        attributes 'Main-Class': 't3.Main'
+    }
+    baseName = 'cla'
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}
+
+task genAntlr(type: Exec) {
+    description = 'Tests parser execution.'
+    executable = "antlr4"
+    args  = ["-visitor", "${rootDir}/src/main/java/convork.g4", "-o", "${rootDir}/src/main/java/", "-package", "gen"]
+}
+
+
+dependencies {
+    compile 'org.antlr:antlr4:4.7.1'
+    compile 'com.beust:jcommander:1.78'
+}

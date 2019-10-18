@@ -1,12 +1,16 @@
 grammar convork;
+@lexer::members {void erroLexico(String msg) { throw new ParseCancellationException(msg); }}
 
 fragment ALGARISMO : '0'..'9';
 fragment LETRA: [a-zA-Z];
 
 
-program: js? source? EOF;
 
-js: 'js {' statements* '};';
+
+program: js? source? EOF;
+// Ignorar espacos em branco
+
+js: 'js{' statements* '};';
 
 statements: functionDec | variables;
 
@@ -18,10 +22,10 @@ functionBody : (~'}')*;
 variableValue: ~('\n'|';')*;
 variables: 'var' Identifier '=' variableValue ';';
 
-source: header content footer;
+source: header? content footer?;
 
 parameters:parameter*;
-parameter: Identifier '=' STRING_LITERAL;
+parameter: Identifier '=' CADEIA;
 
 header: 'header('parameters'){' element* '};';
 content: 'content('parameters'){' element* '};';
@@ -38,4 +42,21 @@ card_element: 'card('parameters'){'element*'};';
 container_element: 'container('parameters'){'element*'};';
 image_element: 'image('parameters'){'element*'};';
 
-STRING_LITERAL : '"' (~('"' | '\\' | '\r' | '\n') | '\\' ('"' | '\\'))* '"';
+COMENTARIO: '/*' ~('}'|'\n'|'\r')* '*/' -> skip;
+
+CADEIA : '"' ~('\n' | '\r' | '"')* '"';
+
+// Ignorar espacos em branco
+WS:   (' ') -> skip;
+
+// Ignorar fim de linha
+ENDL:  ('\n' | '\t' | '\r') -> skip;
+COMENTARIO_NAO_FECHADO
+:   '/*' .*?
+    {erroLexico("Linha " + (getLine()+1) + ": comentario nao fechado");}
+;
+
+ERRO_LEXICO
+:	.
+	{erroLexico("Linha " + getLine() + ": " + getText() + " - simbolo nao identificado");}
+;

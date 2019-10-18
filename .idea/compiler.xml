@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="Compilador-LA-master.main" target="12" />
+      <module name="Compilador-LA-master.test" target="12" />
+      <module name="Compilador-LA_main" target="1.10" />
+      <module name="Compilador-LA_test" target="1.10" />
+      <module name="LA-Compiler.main" target="12" />
+      <module name="LA-Compiler.test" target="12" />
+      <module name="T3-CC2.main" target="12" />
+      <module name="T3-CC2.test" target="12" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
