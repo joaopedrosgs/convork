@@ -5,6 +5,7 @@ text("Logo");
 search(){};
 };
 content(){
+carousel(){};
 button(){
 text("teste");
 };

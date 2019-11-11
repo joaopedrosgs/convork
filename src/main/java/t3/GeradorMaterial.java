@@ -7,9 +7,11 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
     private PilhaDeTabelas pilhaDeTabelas;
 
     private SaidaParser sp;
+    private StringBuilder script;
 
     public GeradorMaterial(SaidaParser sp) {
         this.sp = sp;
+        script = new StringBuilder();
     }
 
     @Override
@@ -34,7 +36,12 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
         if (ctx.footer() != null) {
             visitFooter(ctx.footer());
         }
-        sp.printCode("    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\"></script>\n" +
+        sp.printCode("<script\n" +
+                "  src=\"https://code.jquery.com/jquery-3.4.1.min.js\"\n" +
+                "  integrity=\"sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=\"\n" +
+                "  crossorigin=\"anonymous\"></script>" +
+                " <script src=\"https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js\"></script>\n" +
+                "<script>"+script.toString()+"</script>"+
                 "</body>\n" +
                 "</html>\n");
 
@@ -150,6 +157,33 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitCarousel_element(convorkParser.Carousel_elementContext ctx) {
+        sp.printCode("\n" +
+                "  <div class=\"carousel\">\n" +
+                "    <a class=\"carousel-item\" href=\"#one!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
+                "    <a class=\"carousel-item\" href=\"#two!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
+                "    <a class=\"carousel-item\" href=\"#three!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
+                "    <a class=\"carousel-item\" href=\"#four!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
+                "    <a class=\"carousel-item\" href=\"#five!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
+                "  </div>\n" +
+                "      ");
+        script.append("// CAROUSEL\n" +
+                "$(document).ready(function(){\n" +
+                "  $('.carousel').carousel(\n" +
+                "  {\n" +
+                "    dist: 0,\n" +
+                "    padding: 0,\n" +
+                "    fullWidth: true,\n" +
+                "    indicators: true,\n" +
+                "    duration: 100,\n" +
+                "  }\n" +
+                "  );\n" +
+                "});\n" +
+                "\n" +
+                "autoplay()   \n" +
+                "function autoplay() {\n" +
+                "    $('.carousel').carousel('next');\n" +
+                "    setTimeout(autoplay, 4500);\n" +
+                "}");
         return super.visitCarousel_element(ctx);
     }
 
