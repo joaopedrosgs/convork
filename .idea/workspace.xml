@@ -2,33 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90001b70-4256-44e2-ad56-1bd4ee09bded" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/modules/convork.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/convork.main.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules/convork.test.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/a.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/a.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/LA-Compiler.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/LA-Compiler.main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/LA-Compiler.test.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/convork.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/convork.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convork.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convork.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convork.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convork.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkBaseVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/t3/AnalisadorSemantico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/AnalisadorSemantico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t3/GeradorMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/GeradorMaterial.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/a.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/in/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/in/1.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -301,6 +284,7 @@
       <workItem from="1571400360201" duration="3925000" />
       <workItem from="1571405924110" duration="4520000" />
       <workItem from="1573432554509" duration="4810000" />
+      <workItem from="1573482127884" duration="2075000" />
     </task>
     <servers />
   </component>

@@ -32,10 +32,10 @@ logo_element: 'logo('parameters'){'element*'};';
 button_element: 'button('parameters'){'element*'};';
 search_element: 'search('parameters'){'element*'};';
 carousel_element: 'carousel('parameters'){'element*'};';
-text_element: 'text('parameters'){'CADEIA'};';
+text_element: 'text('CADEIA');';
 card_element: 'card('parameters'){'element*'};';
 container_element: 'container('parameters'){'element*'};';
-image_element: 'image('parameters'){'element*'};';
+image_element: 'image('parameters');';
 
 COMENTARIO: '/*' ~('}'|'\n'|'\r')* '*/' -> skip;
 

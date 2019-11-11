@@ -55,11 +55,23 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
 
     @Override
     public String visitLogo_element(convorkParser.Logo_elementContext ctx) {
+        for(convorkParser.ElementContext element : ctx.element())  {
+            if(element.image_element()==null && element.text_element()==null) {
+                sp.print("Linha "+element.start.getLine()+": Logo não pode possuir filhos que não são text ou imagem");
+            }
+            visitElement(element);
+        }
         return super.visitLogo_element(ctx);
     }
 
     @Override
     public String visitButton_element(convorkParser.Button_elementContext ctx) {
+        for(convorkParser.ElementContext element : ctx.element())  {
+            if(element.text_element()==null ) {
+                sp.print("Linha "+element.start.getLine()+": Botão deve possuir apenas texto");
+            }
+            visitElement(element);
+        }
         return super.visitButton_element(ctx);
     }
 
@@ -70,6 +82,12 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
 
     @Override
     public String visitCarousel_element(convorkParser.Carousel_elementContext ctx) {
+        for(convorkParser.ElementContext element : ctx.element())  {
+            if(element.image_element()==null) {
+                sp.print("Linha "+element.start.getLine()+": Carrossel deve possuir apenas imagens");
+            }
+            visitElement(element);
+        }
         return super.visitCarousel_element(ctx);
     }
 
