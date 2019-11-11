@@ -15,7 +15,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
         Args argsObj = new Args();
         JCommander.newBuilder()
-                .addObject(argsObj)
+                    .addObject(argsObj)
                 .build()
                 .parse(args);
 
@@ -51,7 +51,6 @@ public class Main {
 
         GeradorMaterial gdc = new GeradorMaterial(sp);
         gdc.visitProgram(arvore);
-
 
         sp.WriteToFile(argsObj.out);
 

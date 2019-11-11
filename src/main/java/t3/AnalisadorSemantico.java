@@ -19,41 +19,6 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     }
 
     @Override
-    public String visitJs(convorkParser.JsContext ctx) {
-        return super.visitJs(ctx);
-    }
-
-    @Override
-    public String visitStatements(convorkParser.StatementsContext ctx) {
-        return super.visitStatements(ctx);
-    }
-
-    @Override
-    public String visitFunctionDec(convorkParser.FunctionDecContext ctx) {
-        return super.visitFunctionDec(ctx);
-    }
-
-    @Override
-    public String visitFormalParameterList(convorkParser.FormalParameterListContext ctx) {
-        return super.visitFormalParameterList(ctx);
-    }
-
-    @Override
-    public String visitFunctionBody(convorkParser.FunctionBodyContext ctx) {
-        return super.visitFunctionBody(ctx);
-    }
-
-    @Override
-    public String visitVariableValue(convorkParser.VariableValueContext ctx) {
-        return super.visitVariableValue(ctx);
-    }
-
-    @Override
-    public String visitVariables(convorkParser.VariablesContext ctx) {
-        return super.visitVariables(ctx);
-    }
-
-    @Override
     public String visitSource(convorkParser.SourceContext ctx) {
         return super.visitSource(ctx);
     }

@@ -6,6 +6,8 @@
       <module name="Compilador-LA-master.test" target="12" />
       <module name="Compilador-LA_main" target="1.10" />
       <module name="Compilador-LA_test" target="1.10" />
+      <module name="convork.main" target="1.8" />
+      <module name="convork.test" target="1.8" />
       <module name="LA-Compiler.main" target="12" />
       <module name="LA-Compiler.test" target="12" />
       <module name="T3-CC2.main" target="12" />

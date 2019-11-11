@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LA-Compiler.iml" filepath="$PROJECT_DIR$/.idea/modules/LA-Compiler.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LA-Compiler.main.iml" filepath="$PROJECT_DIR$/.idea/modules/LA-Compiler.main.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/LA-Compiler.test.iml" filepath="$PROJECT_DIR$/.idea/modules/LA-Compiler.test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/convork.iml" filepath="$PROJECT_DIR$/.idea/modules/convork.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/convork.main.iml" filepath="$PROJECT_DIR$/.idea/modules/convork.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/convork.test.iml" filepath="$PROJECT_DIR$/.idea/modules/convork.test.iml" />
     </modules>
   </component>
 </project>

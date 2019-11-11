@@ -2,282 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90001b70-4256-44e2-ad56-1bd4ee09bded" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_beust_jcommander_1_78.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/com_beust_jcommander_1_78.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/t3/AnalisadorSemantico.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/t3/Args.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/t3/GeradorMaterial.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/test1.convork" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/convork.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/convork.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules/convork.test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/a.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/a.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/LA-Compiler.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/LA-Compiler.main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/LA-Compiler.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/LA-Compiler.test.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/fatJar/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/fatJar/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/LA.g4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/AnalisadorSemanticoLA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/EntradaTabelaDeSimbolos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/EntradaTabelaDeSimbolos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/ErrorListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/ErrorListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/GeradorDeCodigo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LA.interp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LA.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LABaseListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LABaseVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LALexer.interp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LALexer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LALexer.tokens" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LAListener.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LAParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/LAVisitor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/PilhaDeTabelas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/PilhaDeTabelas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/SaidaParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/SaidaParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/t1/TabelaDeSimbolos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/TabelaDeSimbolos.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/LEIA_ME.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/1-algoritmo_2-2_apostila_LA_1_erro_linha_3_acusado_linha_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/10-algoritmo_2-4_apostila_LA_1_erro_linha_16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/11-algoritmo_3-1_apostila_LA_1_erro_linha_6_acusado_linha_9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/12-algoritmo_3-1_apostila_LA_1_erro_linha_13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/13-algoritmo_3-1_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/14-algoritmo_3-2_apostila_LA_1_erro_linha_15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/15-algoritmo_3-3_apostila_LA_1_erro_linha_21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/16-algoritmo_3-3_apostila_LA_1_erro_linha_11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/17-algoritmo_3-3_apostila_LA_1_erro_linha_15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/18-algoritmo_3-3_apostila_LA_1_erro_linha_21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/19-algoritmo_4-5_apostila_LA_1_erro_linha_29.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/2-algoritmo_2-2_apostila_LA_1_erro_linha_15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/20-algoritmo_5-1_apostila_LA_1_erro_linha_15_acusado_linha_16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/21-algoritmo_5-1_apostila_LA_1_erro_linha_19_acusado_linha_20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/22-algoritmo_5-3_apostila_LA_1_erro_linha_26_acusado_linha_27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/23-algoritmo_5-4_apostila_LA_1_erro_linha_10_acusado_linha_11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/24-algoritmo_5-4_apostila_LA_1_erro_linha_11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/25-algoritmo_5-4_apostila_LA_1_erro_linha_15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/26-algoritmo_5-4_apostila_LA_1_erro_linha_13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/27-algoritmo_5-4_apostila_LA_1_erro_linha_18_acusado_linha_19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/28-algoritmo_6-1_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/29-algoritmo_6-1_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/3-algoritmo_2-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/30-algoritmo_6-1_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/31-algoritmo_6-1_apostila_LA_1_erro_linha_8_acusado_linha_9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/32-algoritmo_6-1_apostila_LA_1_erro_linha_11_acusado_linha_12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/33-algoritmo_6-2_apostila_LA_1_erro_linha_10_acusado_linha_12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/34-algoritmo_6-2_apostila_LA_1_erro_linha_16_acusado_linha_21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/35-algoritmo_6-4_apostila_LA_1_erro_linha_16_acusado_linha_17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/36-algoritmo_6-4_apostila_LA_1_erro_linha_16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/37-algoritmo_6-5_apostila_LA_1_erro_linha_18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/38-algoritmo_6-6_apostila_LA_1_erro_linha_23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/39-algoritmo_6-9_apostila_LA_1_erro_linha_30.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/4-algoritmo_2-2_apostila_LA_1_erro_linha_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/40-algoritmo_6-10_apostila_LA_1_erro_linha_26_acusado_linha_27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/41-algoritmo_7-1_apostila_LA_1_erro_linha_6_acusado_linha_7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/42-algoritmo_7-1_apostila_LA_1_erro_linha_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/43-algoritmo_7-2_apostila_LA_1_erro_linha_14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/44-algoritmo_7-3_apostila_LA_1_erro_linha_27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/45-algoritmo_8-1_apostila_LA_1_erro_linha_6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/46-algoritmo_8-1_apostila_LA_1_erro_linha_7_acusado_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/47-algoritmo_8-1_apostila_LA_1_erro_linha_18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/48-algoritmo_8-2_apostila_LA_1_erro_linha_34.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/49-algoritmo_9-2_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/5-algoritmo_2-2_apostila_LA_1_erro_linha_11_acusado_linha_14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/50-algoritmo_9-2_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/51-algoritmo_9-2_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/52-algoritmo_9-2_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/53-algoritmo_9-2_apostila_LA_1_erro_linha_26_acusado_linha_28.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/54-algoritmo_9-4_apostila_LA_1_erro_linha_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/55-algoritmo_9-4_apostila_LA_1_erro_linha_21_acusado_linha_23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/56-algoritmo_10-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/57-algoritmo_10-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/58-algoritmo_10-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/59-algoritmo_10-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/6-algoritmo_2-2_apostila_LA_1_erro_linha_14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/60-algoritmo_10-4_apostila_LA_1_erro_linha_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/61-algoritmo_10-4_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/62-algoritmo_10-4_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/7-algoritmo_2-3_apostila_LA_1_erro_linha_9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/8-algoritmo_2-3_apostila_LA_1_erro_linha_12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/entrada/9-algoritmo_2-4_apostila_LA_1_erro_linha_13_acusado_linha_16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/1-algoritmo_2-2_apostila_LA_1_erro_linha_3_acusado_linha_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/10-algoritmo_2-4_apostila_LA_1_erro_linha_16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/11-algoritmo_3-1_apostila_LA_1_erro_linha_6_acusado_linha_9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/12-algoritmo_3-1_apostila_LA_1_erro_linha_13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/13-algoritmo_3-1_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/14-algoritmo_3-2_apostila_LA_1_erro_linha_15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/15-algoritmo_3-3_apostila_LA_1_erro_linha_21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/16-algoritmo_3-3_apostila_LA_1_erro_linha_11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/17-algoritmo_3-3_apostila_LA_1_erro_linha_15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/18-algoritmo_3-3_apostila_LA_1_erro_linha_21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/19-algoritmo_4-5_apostila_LA_1_erro_linha_29.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/2-algoritmo_2-2_apostila_LA_1_erro_linha_15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/20-algoritmo_5-1_apostila_LA_1_erro_linha_15_acusado_linha_16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/21-algoritmo_5-1_apostila_LA_1_erro_linha_19_acusado_linha_20.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/22-algoritmo_5-3_apostila_LA_1_erro_linha_26_acusado_linha_27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/23-algoritmo_5-4_apostila_LA_1_erro_linha_10_acusado_linha_11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/24-algoritmo_5-4_apostila_LA_1_erro_linha_11.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/25-algoritmo_5-4_apostila_LA_1_erro_linha_15.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/26-algoritmo_5-4_apostila_LA_1_erro_linha_13.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/27-algoritmo_5-4_apostila_LA_1_erro_linha_18_acusado_linha_19.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/28-algoritmo_6-1_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/29-algoritmo_6-1_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/3-algoritmo_2-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/30-algoritmo_6-1_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/31-algoritmo_6-1_apostila_LA_1_erro_linha_8_acusado_linha_9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/32-algoritmo_6-1_apostila_LA_1_erro_linha_11_acusado_linha_12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/33-algoritmo_6-2_apostila_LA_1_erro_linha_10_acusado_linha_12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/34-algoritmo_6-2_apostila_LA_1_erro_linha_16_acusado_linha_21.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/35-algoritmo_6-4_apostila_LA_1_erro_linha_16_acusado_linha_17.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/36-algoritmo_6-4_apostila_LA_1_erro_linha_16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/37-algoritmo_6-5_apostila_LA_1_erro_linha_18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/38-algoritmo_6-6_apostila_LA_1_erro_linha_23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/39-algoritmo_6-9_apostila_LA_1_erro_linha_30.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/4-algoritmo_2-2_apostila_LA_1_erro_linha_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/40-algoritmo_6-10_apostila_LA_1_erro_linha_26_acusado_linha_27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/41-algoritmo_7-1_apostila_LA_1_erro_linha_6_acusado_linha_7.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/42-algoritmo_7-1_apostila_LA_1_erro_linha_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/43-algoritmo_7-2_apostila_LA_1_erro_linha_14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/44-algoritmo_7-3_apostila_LA_1_erro_linha_27.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/45-algoritmo_8-1_apostila_LA_1_erro_linha_6.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/46-algoritmo_8-1_apostila_LA_1_erro_linha_7_acusado_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/47-algoritmo_8-1_apostila_LA_1_erro_linha_18.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/48-algoritmo_8-2_apostila_LA_1_erro_linha_34.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/49-algoritmo_9-2_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/5-algoritmo_2-2_apostila_LA_1_erro_linha_11_acusado_linha_14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/50-algoritmo_9-2_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/51-algoritmo_9-2_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/52-algoritmo_9-2_apostila_LA_1_erro_linha_8.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/53-algoritmo_9-2_apostila_LA_1_erro_linha_26_acusado_linha_28.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/54-algoritmo_9-4_apostila_LA_1_erro_linha_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/55-algoritmo_9-4_apostila_LA_1_erro_linha_21_acusado_linha_23.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/56-algoritmo_10-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/57-algoritmo_10-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/58-algoritmo_10-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/59-algoritmo_10-2_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/6-algoritmo_2-2_apostila_LA_1_erro_linha_14.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/60-algoritmo_10-4_apostila_LA_1_erro_linha_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/61-algoritmo_10-4_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/62-algoritmo_10-4_apostila_LA_1_erro_linha_5.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/7-algoritmo_2-3_apostila_LA_1_erro_linha_9.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/8-algoritmo_2-3_apostila_LA_1_erro_linha_12.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/1.arquivos_com_erros_sintaticos/saida/9-algoritmo_2-4_apostila_LA_1_erro_linha_13_acusado_linha_16.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/LEIA_ME.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/1.algoritmo_2-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/10.algoritmo_7-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/11.algoritmo_8-1_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/12.algoritmo_8-3_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/13.algoritmo_9-4_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/14.algoritmo_10-1_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/15.algoritmo_11-1_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/16.algoritmo_3-3_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/17.algoritmo_9-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/18.algoritmo_2-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/2.algoritmo_2-4_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/3.algoritmo_3-1_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/4.algoritmo_3-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/5.algoritmo_3-3_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/6.algoritmo_4-5_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/7.algoritmo_5-3_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/8.algoritmo_6-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/entrada/9.algoritmo_6-9_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/1.algoritmo_2-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/10.algoritmo_7-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/11.algoritmo_8-1_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/12.algoritmo_8-3_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/13.algoritmo_9-4_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/14.algoritmo_10-1_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/15.algoritmo_11-1_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/16.algoritmo_3-3_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/17.algoritmo_9-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/18.algoritmo_2-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/2.algoritmo_2-4_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/3.algoritmo_3-1_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/4.algoritmo_3-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/5.algoritmo_3-3_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/6.algoritmo_4-5_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/7.algoritmo_5-3_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/8.algoritmo_6-2_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/2.arquivos_com_erros_semanticos/saida/9.algoritmo_6-9_apostila_LA.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/1.declaracao_leitura_impressao_inteiro.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/10.caso_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/11.constante_caso_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/12.para_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/13.enquanto_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/14.faca-ate_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/15.ponteiro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/16.registro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/17.registro_tipo_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/18.procedimento_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/19.funcao_dobro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/2.declaracao_leitura_impressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/20.vetor_repeticao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/3.declaracao_leitura_impressao_literal.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/4.declaracao_leitura_impressao_inteiro_literal.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/5.declaracao_leitura_impressao_expressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/6.declaracao_leitura_atribuicao_impressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/7.se_entao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/8.se_entao_senao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/1.entrada/9.se_entao_expressao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/1.declaracao_leitura_impressao_inteiro.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/10.caso_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/11.constante_caso_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/12.para_declaracao_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/13.enquanto_declaracao_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/14.faca-ate_declaracao_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/15.ponteiro_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/16.registro_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/17.registro_tipo_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/18.procedimento_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/19.funcao_dobro_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/2.declaracao_leitura_impressao_real.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/20.vetor_repeticao_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/3.declaracao_leitura_impressao_literal.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/4.declaracao_leitura_impressao_inteiro_literal.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/5.declaracao_leitura_impressao_expressao_real.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/6.declaracao_leitura_atribuicao_impressao_real.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/7.se_entao_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/8.se_entao_senao_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/9.se_entao_expressao_impressao.alg.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/2.exemplos_codigo_C/compila.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/1.declaracao_leitura_impressao_inteiro.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/10.caso_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/11.constante_caso_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/12.para_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/13.enquanto_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/14.faca-ate_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/15.ponteiro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/16.registro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/17.registro_tipo_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/18.procedimento_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/19.funcao_dobro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/2.declaracao_leitura_impressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/20.vetor_repeticao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/3.declaracao_leitura_impressao_literal.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/4.declaracao_leitura_impressao_inteiro_literal.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/5.declaracao_leitura_impressao_expressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/6.declaracao_leitura_atribuicao_impressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/7.se_entao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/8.se_entao_senao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/3.entrada_execucao/9.se_entao_expressao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/1.declaracao_leitura_impressao_inteiro.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/10.caso_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/11.constante_caso_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/12.para_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/13.enquanto_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/14.faca-ate_declaracao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/15.ponteiro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/16.registro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/17.registro_tipo_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/18.procedimento_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/19.funcao_dobro_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/2.declaracao_leitura_impressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/20.vetor_repeticao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/3.declaracao_leitura_impressao_literal.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/4.declaracao_leitura_impressao_inteiro_literal.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/5.declaracao_leitura_impressao_expressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/6.declaracao_leitura_atribuicao_impressao_real.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/7.se_entao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/8.se_entao_senao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/4.saida/9.se_entao_expressao_impressao.alg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/casosDeTesteT1/3.arquivos_sem_erros/LEIA_ME.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/LA-Compiler.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/LA-Compiler.main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/LA-Compiler.test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/convork.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/convork.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convork.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convork.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convork.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convork.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/t3/AnalisadorSemantico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/AnalisadorSemantico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/t3/GeradorMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/GeradorMaterial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/t3/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/in/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/in/1.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -319,22 +71,39 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LA-Compiler" type="f1a62948:ProjectNode" />
+                <item name="convork" type="f1a62948:ProjectNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LA-Compiler" type="f1a62948:ProjectNode" />
+                <item name="convork" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="convork" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="convork" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LA-Compiler" type="f1a62948:ProjectNode" />
+                <item name="convork" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="build" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="LA-Compiler" type="f1a62948:ProjectNode" />
+                <item name="convork" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="convork" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="other" type="c8890929:TasksNode$1" />
               </path>
@@ -360,7 +129,6 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="$PROJECT_DIR$/src/main/java/LA.g4::/auto-gen" value="false" />
     <property name="$PROJECT_DIR$/src/main/java/LA.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/main/java/LA.g4::/gen-visitor" value="true" />
@@ -370,9 +138,10 @@
     <property name="$PROJECT_DIR$/src/main/java/convork.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/main/java/convork.g4::/gen-visitor" value="true" />
     <property name="$PROJECT_DIR$/src/main/java/convork.g4::/language" value="Java" />
-    <property name="$PROJECT_DIR$/src/main/java/convork.g4::/lib-dir" value="C:\Users\jsang\Documents\LA-Compiler\src\main\java" />
-    <property name="$PROJECT_DIR$/src/main/java/convork.g4::/output-dir" value="C:\Users\jsang\Documents\LA-Compiler\src\main\java" />
+    <property name="$PROJECT_DIR$/src/main/java/convork.g4::/lib-dir" value="$PROJECT_DIR$/src/main/java" />
+    <property name="$PROJECT_DIR$/src/main/java/convork.g4::/output-dir" value="$PROJECT_DIR$/src/main/java" />
     <property name="$PROJECT_DIR$/src/main/java/convork.g4::/package" value="gen" />
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -385,7 +154,7 @@
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.2763672" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -531,6 +300,7 @@
       <workItem from="1571343813777" duration="3835000" />
       <workItem from="1571400360201" duration="3925000" />
       <workItem from="1571405924110" duration="4520000" />
+      <workItem from="1573432554509" duration="4810000" />
     </task>
     <servers />
   </component>

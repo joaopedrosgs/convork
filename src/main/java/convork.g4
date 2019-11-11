@@ -5,22 +5,17 @@ fragment ALGARISMO : '0'..'9';
 fragment LETRA: [a-zA-Z];
 
 
+// Ignorar espacos em branco
+WS:   (' ') -> skip;
 
+// Ignorar fim de linha
+ENDL:  ('\n' | '\t' | '\r') -> skip;
 
-program: js? source? EOF;
+program: header? content footer? EOF;
 // Ignorar espacos em branco
 
-js: 'js{' statements* '};';
 
-statements: functionDec | variables;
-
-functionDec : 'function'? Identifier '(' formalParameterList? ')' '{' functionBody '};';
-
-formalParameterList: Identifier (',' Identifier)*;
 Identifier: (LETRA|'_') ('_'|ALGARISMO|LETRA)*;
-functionBody : (~'}')*;
-variableValue: ~('\n'|';')*;
-variables: 'var' Identifier '=' variableValue ';';
 
 source: header? content footer?;
 
@@ -37,7 +32,7 @@ logo_element: 'logo('parameters'){'element*'};';
 button_element: 'button('parameters'){'element*'};';
 search_element: 'search('parameters'){'element*'};';
 carousel_element: 'carousel('parameters'){'element*'};';
-text_element: 'text('parameters'){'element*'};';
+text_element: 'text('parameters'){'CADEIA'};';
 card_element: 'card('parameters'){'element*'};';
 container_element: 'container('parameters'){'element*'};';
 image_element: 'image('parameters'){'element*'};';
@@ -46,11 +41,7 @@ COMENTARIO: '/*' ~('}'|'\n'|'\r')* '*/' -> skip;
 
 CADEIA : '"' ~('\n' | '\r' | '"')* '"';
 
-// Ignorar espacos em branco
-WS:   (' ') -> skip;
 
-// Ignorar fim de linha
-ENDL:  ('\n' | '\t' | '\r') -> skip;
 COMENTARIO_NAO_FECHADO
 :   '/*' .*?
     {erroLexico("Linha " + (getLine()+1) + ": comentario nao fechado");}

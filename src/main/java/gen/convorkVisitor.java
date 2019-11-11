@@ -1,4 +1,4 @@
-// Generated from C:/Users/jsang/Documents/LA-Compiler/src/main/java\convork.g4 by ANTLR 4.7.2
+// Generated from /home/pedro/convork/src/main/java/convork.g4 by ANTLR 4.7.2
 package gen;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -16,48 +16,6 @@ public interface convorkVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitProgram(convorkParser.ProgramContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link convorkParser#js}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitJs(convorkParser.JsContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link convorkParser#statements}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitStatements(convorkParser.StatementsContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link convorkParser#functionDec}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionDec(convorkParser.FunctionDecContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link convorkParser#formalParameterList}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFormalParameterList(convorkParser.FormalParameterListContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link convorkParser#functionBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionBody(convorkParser.FunctionBodyContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link convorkParser#variableValue}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariableValue(convorkParser.VariableValueContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link convorkParser#variables}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitVariables(convorkParser.VariablesContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link convorkParser#source}.
 	 * @param ctx the parse tree

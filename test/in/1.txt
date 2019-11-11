@@ -1,2 +1,11 @@
-header(){};
-content(){};
+header(){
+logo(){
+text(){"logo"};
+};
+search(){};
+};
+content(){
+button(){
+text(){"teste"};
+};
+};
