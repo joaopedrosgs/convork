@@ -48,9 +48,18 @@ public class Main {
             sp.print("Falha na analise Semantica!");
             return;
         }
+        switch (argsObj.target) {
+            case "material": {
+                GeradorMaterial gdc = new GeradorMaterial(sp);
+                gdc.visitProgram(arvore);
+                break;
+            }
+            case "bootstrap": {
+                GeradorBootstrap gb = new GeradorBootstrap(sp);
+                gb.visitProgram(arvore);
 
-        GeradorMaterial gdc = new GeradorMaterial(sp);
-        gdc.visitProgram(arvore);
+            }
+        }
 
         sp.WriteToFile(argsObj.out);
 
