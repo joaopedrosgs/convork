@@ -65,6 +65,31 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     }
 
     @Override
+    public String visitColorParameter(convorkParser.ColorParameterContext ctx) {
+        return super.visitColorParameter(ctx);
+    }
+
+    @Override
+    public String visitPaddingParameter(convorkParser.PaddingParameterContext ctx) {
+        return super.visitPaddingParameter(ctx);
+    }
+
+    @Override
+    public String visitMarginParameter(convorkParser.MarginParameterContext ctx) {
+        return super.visitMarginParameter(ctx);
+    }
+
+    @Override
+    public String visitSizeParameter(convorkParser.SizeParameterContext ctx) {
+        return super.visitSizeParameter(ctx);
+    }
+
+    @Override
+    public String visitIconParameter(convorkParser.IconParameterContext ctx) {
+        return super.visitIconParameter(ctx);
+    }
+
+    @Override
     public String visitButton_element(convorkParser.Button_elementContext ctx) {
         for(convorkParser.ElementContext element : ctx.element())  {
             if(element.text_element()==null ) {

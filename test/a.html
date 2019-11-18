@@ -21,11 +21,39 @@ Logo</a><form>
     <div class="nav-wrapper">
     </div>
   </nav><div class='content'>
-  <a class="waves-effect waves-teal btn-flat">
+
+  <div class="carousel">
+    <a class="carousel-item" href="#one!"><img src="/home/pedro/Downloads/4598.png"></a>
+    <a class="carousel-item" href="#two!"><img src="/home/pedro/Downloads/4598.png"></a>
+    <a class="carousel-item" href="#three!"><img src="/home/pedro/Downloads/4598.png"></a>
+    <a class="carousel-item" href="#four!"><img src="/home/pedro/Downloads/4598.png"></a>
+    <a class="carousel-item" href="#five!"><img src="/home/pedro/Downloads/4598.png"></a>
+  </div>
+        <a class="waves-effect waves-light teal btn-flat">
 
 teste</a>
 </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-</body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>// CAROUSEL
+$(document).ready(function(){
+  $('.carousel').carousel(
+  {
+    dist: 0,
+    padding: 0,
+    fullWidth: true,
+    indicators: true,
+    duration: 100,
+  }
+  );
+});
+
+autoplay()   
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 4500);
+}</script></body>
 </html>
 

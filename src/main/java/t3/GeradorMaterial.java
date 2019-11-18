@@ -104,8 +104,12 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitButton_element(convorkParser.Button_elementContext ctx) {
+        String color="";
+        if(ctx.colorParameter(0)!=null) {
+            color = ctx.colorParameter(0).CADEIA().getText().substring(1, ctx.colorParameter(0).CADEIA().getText().length() - 1);
+        }
 
-        sp.printCode("  <a class=\"waves-effect waves-teal btn-flat\">\n\n");
+        sp.printCode("  <a class=\"waves-effect waves-light "+color+" btn-flat\">\n\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }

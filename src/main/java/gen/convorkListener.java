@@ -88,6 +88,56 @@ public interface convorkListener extends ParseTreeListener {
 	 */
 	void exitElement(convorkParser.ElementContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link convorkParser#colorParameter}.
+	 * @param ctx the parse tree
+	 */
+	void enterColorParameter(convorkParser.ColorParameterContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#colorParameter}.
+	 * @param ctx the parse tree
+	 */
+	void exitColorParameter(convorkParser.ColorParameterContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link convorkParser#paddingParameter}.
+	 * @param ctx the parse tree
+	 */
+	void enterPaddingParameter(convorkParser.PaddingParameterContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#paddingParameter}.
+	 * @param ctx the parse tree
+	 */
+	void exitPaddingParameter(convorkParser.PaddingParameterContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link convorkParser#marginParameter}.
+	 * @param ctx the parse tree
+	 */
+	void enterMarginParameter(convorkParser.MarginParameterContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#marginParameter}.
+	 * @param ctx the parse tree
+	 */
+	void exitMarginParameter(convorkParser.MarginParameterContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link convorkParser#sizeParameter}.
+	 * @param ctx the parse tree
+	 */
+	void enterSizeParameter(convorkParser.SizeParameterContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#sizeParameter}.
+	 * @param ctx the parse tree
+	 */
+	void exitSizeParameter(convorkParser.SizeParameterContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link convorkParser#iconParameter}.
+	 * @param ctx the parse tree
+	 */
+	void enterIconParameter(convorkParser.IconParameterContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#iconParameter}.
+	 * @param ctx the parse tree
+	 */
+	void exitIconParameter(convorkParser.IconParameterContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link convorkParser#logo_element}.
 	 * @param ctx the parse tree
 	 */

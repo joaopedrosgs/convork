@@ -18,19 +18,22 @@ public class convorkParser extends Parser {
 		new PredictionContextCache();
 	public static final int
 		T__0=1, T__1=2, T__2=3, T__3=4, T__4=5, T__5=6, T__6=7, T__7=8, T__8=9, 
-		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, WS=17, 
-		ENDL=18, Identifier=19, COMENTARIO=20, CADEIA=21, COMENTARIO_NAO_FECHADO=22, 
-		ERRO_LEXICO=23;
+		T__9=10, T__10=11, T__11=12, T__12=13, T__13=14, T__14=15, T__15=16, T__16=17, 
+		T__17=18, T__18=19, T__19=20, T__20=21, WS=22, ENDL=23, Identifier=24, 
+		COMENTARIO=25, CADEIA=26, COMENTARIO_NAO_FECHADO=27, ERRO_LEXICO=28;
 	public static final int
 		RULE_program = 0, RULE_source = 1, RULE_parameters = 2, RULE_parameter = 3, 
 		RULE_header = 4, RULE_content = 5, RULE_footer = 6, RULE_element = 7, 
-		RULE_logo_element = 8, RULE_button_element = 9, RULE_search_element = 10, 
-		RULE_carousel_element = 11, RULE_text_element = 12, RULE_card_element = 13, 
-		RULE_container_element = 14, RULE_image_element = 15;
+		RULE_colorParameter = 8, RULE_paddingParameter = 9, RULE_marginParameter = 10, 
+		RULE_sizeParameter = 11, RULE_iconParameter = 12, RULE_logo_element = 13, 
+		RULE_button_element = 14, RULE_search_element = 15, RULE_carousel_element = 16, 
+		RULE_text_element = 17, RULE_card_element = 18, RULE_container_element = 19, 
+		RULE_image_element = 20;
 	private static String[] makeRuleNames() {
 		return new String[] {
 			"program", "source", "parameters", "parameter", "header", "content", 
-			"footer", "element", "logo_element", "button_element", "search_element", 
+			"footer", "element", "colorParameter", "paddingParameter", "marginParameter", 
+			"sizeParameter", "iconParameter", "logo_element", "button_element", "search_element", 
 			"carousel_element", "text_element", "card_element", "container_element", 
 			"image_element"
 		};
@@ -40,16 +43,17 @@ public class convorkParser extends Parser {
 	private static String[] makeLiteralNames() {
 		return new String[] {
 			null, "'='", "'header('", "'){'", "'};'", "'content('", "'footer'", "'{'", 
-			"'logo('", "'button('", "'search('", "'carousel('", "'text('", "');'", 
-			"'card('", "'container('", "'image('"
+			"'color='", "'padding='", "'margin='", "'size='", "'icon='", "'logo('", 
+			"'button('", "'search('", "'carousel('", "'text('", "');'", "'card('", 
+			"'container('", "'image('"
 		};
 	}
 	private static final String[] _LITERAL_NAMES = makeLiteralNames();
 	private static String[] makeSymbolicNames() {
 		return new String[] {
 			null, null, null, null, null, null, null, null, null, null, null, null, 
-			null, null, null, null, null, "WS", "ENDL", "Identifier", "COMENTARIO", 
-			"CADEIA", "COMENTARIO_NAO_FECHADO", "ERRO_LEXICO"
+			null, null, null, null, null, null, null, null, null, null, "WS", "ENDL", 
+			"Identifier", "COMENTARIO", "CADEIA", "COMENTARIO_NAO_FECHADO", "ERRO_LEXICO"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();
@@ -140,29 +144,29 @@ public class convorkParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(33);
+			setState(43);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__1) {
 				{
-				setState(32);
+				setState(42);
 				header();
 				}
 			}
 
-			setState(35);
+			setState(45);
 			content();
-			setState(37);
+			setState(47);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__5) {
 				{
-				setState(36);
+				setState(46);
 				footer();
 				}
 			}
 
-			setState(39);
+			setState(49);
 			match(EOF);
 			}
 		}
@@ -213,24 +217,24 @@ public class convorkParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(42);
+			setState(52);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__1) {
 				{
-				setState(41);
+				setState(51);
 				header();
 				}
 			}
 
-			setState(44);
+			setState(54);
 			content();
-			setState(46);
+			setState(56);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			if (_la==T__5) {
 				{
-				setState(45);
+				setState(55);
 				footer();
 				}
 			}
@@ -281,17 +285,17 @@ public class convorkParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(51);
+			setState(61);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
 			while (_la==Identifier) {
 				{
 				{
-				setState(48);
+				setState(58);
 				parameter();
 				}
 				}
-				setState(53);
+				setState(63);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
@@ -336,11 +340,11 @@ public class convorkParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(54);
+			setState(64);
 			match(Identifier);
-			setState(55);
+			setState(65);
 			match(T__0);
-			setState(56);
+			setState(66);
 			match(CADEIA);
 			}
 		}
@@ -391,27 +395,27 @@ public class convorkParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(58);
+			setState(68);
 			match(T__1);
-			setState(59);
+			setState(69);
 			parameters();
-			setState(60);
+			setState(70);
 			match(T__2);
-			setState(64);
+			setState(74);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
 				{
 				{
-				setState(61);
+				setState(71);
 				element();
 				}
 				}
-				setState(66);
+				setState(76);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(67);
+			setState(77);
 			match(T__3);
 			}
 		}
@@ -462,27 +466,27 @@ public class convorkParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(69);
+			setState(79);
 			match(T__4);
-			setState(70);
+			setState(80);
 			parameters();
-			setState(71);
+			setState(81);
 			match(T__2);
-			setState(75);
+			setState(85);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
 				{
 				{
-				setState(72);
+				setState(82);
 				element();
 				}
 				}
-				setState(77);
+				setState(87);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(78);
+			setState(88);
 			match(T__3);
 			}
 		}
@@ -533,29 +537,29 @@ public class convorkParser extends Parser {
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(80);
+			setState(90);
 			match(T__5);
 			{
-			setState(81);
+			setState(91);
 			parameters();
 			}
-			setState(82);
+			setState(92);
 			match(T__6);
-			setState(86);
+			setState(96);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
 				{
 				{
-				setState(83);
+				setState(93);
 				element();
 				}
 				}
-				setState(88);
+				setState(98);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(89);
+			setState(99);
 			match(T__3);
 			}
 		}
@@ -618,62 +622,62 @@ public class convorkParser extends Parser {
 		ElementContext _localctx = new ElementContext(_ctx, getState());
 		enterRule(_localctx, 14, RULE_element);
 		try {
-			setState(99);
+			setState(109);
 			_errHandler.sync(this);
 			switch (_input.LA(1)) {
-			case T__7:
+			case T__12:
 				enterOuterAlt(_localctx, 1);
 				{
-				setState(91);
+				setState(101);
 				logo_element();
 				}
 				break;
-			case T__8:
+			case T__13:
 				enterOuterAlt(_localctx, 2);
 				{
-				setState(92);
+				setState(102);
 				button_element();
 				}
 				break;
-			case T__9:
+			case T__14:
 				enterOuterAlt(_localctx, 3);
 				{
-				setState(93);
+				setState(103);
 				search_element();
 				}
 				break;
-			case T__10:
+			case T__15:
 				enterOuterAlt(_localctx, 4);
 				{
-				setState(94);
+				setState(104);
 				carousel_element();
 				}
 				break;
-			case T__11:
+			case T__16:
 				enterOuterAlt(_localctx, 5);
 				{
-				setState(95);
+				setState(105);
 				text_element();
 				}
 				break;
-			case T__13:
+			case T__18:
 				enterOuterAlt(_localctx, 6);
 				{
-				setState(96);
+				setState(106);
 				card_element();
 				}
 				break;
-			case T__14:
+			case T__19:
 				enterOuterAlt(_localctx, 7);
 				{
-				setState(97);
+				setState(107);
 				container_element();
 				}
 				break;
-			case T__15:
+			case T__20:
 				enterOuterAlt(_localctx, 8);
 				{
-				setState(98);
+				setState(108);
 				image_element();
 				}
 				break;
@@ -692,9 +696,244 @@ public class convorkParser extends Parser {
 		return _localctx;
 	}
 
+	public static class ColorParameterContext extends ParserRuleContext {
+		public TerminalNode CADEIA() { return getToken(convorkParser.CADEIA, 0); }
+		public ColorParameterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_colorParameter; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).enterColorParameter(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).exitColorParameter(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof convorkVisitor ) return ((convorkVisitor<? extends T>)visitor).visitColorParameter(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final ColorParameterContext colorParameter() throws RecognitionException {
+		ColorParameterContext _localctx = new ColorParameterContext(_ctx, getState());
+		enterRule(_localctx, 16, RULE_colorParameter);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(111);
+			match(T__7);
+			setState(112);
+			match(CADEIA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class PaddingParameterContext extends ParserRuleContext {
+		public TerminalNode CADEIA() { return getToken(convorkParser.CADEIA, 0); }
+		public PaddingParameterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_paddingParameter; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).enterPaddingParameter(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).exitPaddingParameter(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof convorkVisitor ) return ((convorkVisitor<? extends T>)visitor).visitPaddingParameter(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final PaddingParameterContext paddingParameter() throws RecognitionException {
+		PaddingParameterContext _localctx = new PaddingParameterContext(_ctx, getState());
+		enterRule(_localctx, 18, RULE_paddingParameter);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(114);
+			match(T__8);
+			setState(115);
+			match(CADEIA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class MarginParameterContext extends ParserRuleContext {
+		public TerminalNode CADEIA() { return getToken(convorkParser.CADEIA, 0); }
+		public MarginParameterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_marginParameter; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).enterMarginParameter(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).exitMarginParameter(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof convorkVisitor ) return ((convorkVisitor<? extends T>)visitor).visitMarginParameter(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final MarginParameterContext marginParameter() throws RecognitionException {
+		MarginParameterContext _localctx = new MarginParameterContext(_ctx, getState());
+		enterRule(_localctx, 20, RULE_marginParameter);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(117);
+			match(T__9);
+			setState(118);
+			match(CADEIA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class SizeParameterContext extends ParserRuleContext {
+		public TerminalNode CADEIA() { return getToken(convorkParser.CADEIA, 0); }
+		public SizeParameterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_sizeParameter; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).enterSizeParameter(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).exitSizeParameter(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof convorkVisitor ) return ((convorkVisitor<? extends T>)visitor).visitSizeParameter(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final SizeParameterContext sizeParameter() throws RecognitionException {
+		SizeParameterContext _localctx = new SizeParameterContext(_ctx, getState());
+		enterRule(_localctx, 22, RULE_sizeParameter);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(120);
+			match(T__10);
+			setState(121);
+			match(CADEIA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
+	public static class IconParameterContext extends ParserRuleContext {
+		public TerminalNode CADEIA() { return getToken(convorkParser.CADEIA, 0); }
+		public IconParameterContext(ParserRuleContext parent, int invokingState) {
+			super(parent, invokingState);
+		}
+		@Override public int getRuleIndex() { return RULE_iconParameter; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).enterIconParameter(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof convorkListener ) ((convorkListener)listener).exitIconParameter(this);
+		}
+		@Override
+		public <T> T accept(ParseTreeVisitor<? extends T> visitor) {
+			if ( visitor instanceof convorkVisitor ) return ((convorkVisitor<? extends T>)visitor).visitIconParameter(this);
+			else return visitor.visitChildren(this);
+		}
+	}
+
+	public final IconParameterContext iconParameter() throws RecognitionException {
+		IconParameterContext _localctx = new IconParameterContext(_ctx, getState());
+		enterRule(_localctx, 24, RULE_iconParameter);
+		try {
+			enterOuterAlt(_localctx, 1);
+			{
+			setState(123);
+			match(T__11);
+			setState(124);
+			match(CADEIA);
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			_errHandler.reportError(this, re);
+			_errHandler.recover(this, re);
+		}
+		finally {
+			exitRule();
+		}
+		return _localctx;
+	}
+
 	public static class Logo_elementContext extends ParserRuleContext {
-		public ParametersContext parameters() {
-			return getRuleContext(ParametersContext.class,0);
+		public List<SizeParameterContext> sizeParameter() {
+			return getRuleContexts(SizeParameterContext.class);
+		}
+		public SizeParameterContext sizeParameter(int i) {
+			return getRuleContext(SizeParameterContext.class,i);
+		}
+		public List<MarginParameterContext> marginParameter() {
+			return getRuleContexts(MarginParameterContext.class);
+		}
+		public MarginParameterContext marginParameter(int i) {
+			return getRuleContext(MarginParameterContext.class,i);
+		}
+		public List<PaddingParameterContext> paddingParameter() {
+			return getRuleContexts(PaddingParameterContext.class);
+		}
+		public PaddingParameterContext paddingParameter(int i) {
+			return getRuleContext(PaddingParameterContext.class,i);
 		}
 		public List<ElementContext> element() {
 			return getRuleContexts(ElementContext.class);
@@ -723,32 +962,64 @@ public class convorkParser extends Parser {
 
 	public final Logo_elementContext logo_element() throws RecognitionException {
 		Logo_elementContext _localctx = new Logo_elementContext(_ctx, getState());
-		enterRule(_localctx, 16, RULE_logo_element);
+		enterRule(_localctx, 26, RULE_logo_element);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(101);
-			match(T__7);
-			setState(102);
-			parameters();
-			setState(103);
-			match(T__2);
-			setState(107);
+			setState(126);
+			match(T__12);
+			setState(132);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__8) | (1L << T__9) | (1L << T__10))) != 0)) {
 				{
-				{
-				setState(104);
-				element();
+				setState(130);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case T__10:
+					{
+					setState(127);
+					sizeParameter();
+					}
+					break;
+				case T__9:
+					{
+					setState(128);
+					marginParameter();
+					}
+					break;
+				case T__8:
+					{
+					setState(129);
+					paddingParameter();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
 				}
-				setState(109);
+				setState(134);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(110);
+			setState(135);
+			match(T__2);
+			setState(139);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
+				{
+				{
+				setState(136);
+				element();
+				}
+				}
+				setState(141);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(142);
 			match(T__3);
 			}
 		}
@@ -764,8 +1035,35 @@ public class convorkParser extends Parser {
 	}
 
 	public static class Button_elementContext extends ParserRuleContext {
-		public ParametersContext parameters() {
-			return getRuleContext(ParametersContext.class,0);
+		public List<SizeParameterContext> sizeParameter() {
+			return getRuleContexts(SizeParameterContext.class);
+		}
+		public SizeParameterContext sizeParameter(int i) {
+			return getRuleContext(SizeParameterContext.class,i);
+		}
+		public List<MarginParameterContext> marginParameter() {
+			return getRuleContexts(MarginParameterContext.class);
+		}
+		public MarginParameterContext marginParameter(int i) {
+			return getRuleContext(MarginParameterContext.class,i);
+		}
+		public List<PaddingParameterContext> paddingParameter() {
+			return getRuleContexts(PaddingParameterContext.class);
+		}
+		public PaddingParameterContext paddingParameter(int i) {
+			return getRuleContext(PaddingParameterContext.class,i);
+		}
+		public List<IconParameterContext> iconParameter() {
+			return getRuleContexts(IconParameterContext.class);
+		}
+		public IconParameterContext iconParameter(int i) {
+			return getRuleContext(IconParameterContext.class,i);
+		}
+		public List<ColorParameterContext> colorParameter() {
+			return getRuleContexts(ColorParameterContext.class);
+		}
+		public ColorParameterContext colorParameter(int i) {
+			return getRuleContext(ColorParameterContext.class,i);
 		}
 		public List<ElementContext> element() {
 			return getRuleContexts(ElementContext.class);
@@ -794,32 +1092,76 @@ public class convorkParser extends Parser {
 
 	public final Button_elementContext button_element() throws RecognitionException {
 		Button_elementContext _localctx = new Button_elementContext(_ctx, getState());
-		enterRule(_localctx, 18, RULE_button_element);
+		enterRule(_localctx, 28, RULE_button_element);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(112);
-			match(T__8);
-			setState(113);
-			parameters();
-			setState(114);
-			match(T__2);
-			setState(118);
+			setState(144);
+			match(T__13);
+			setState(152);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11))) != 0)) {
 				{
-				{
-				setState(115);
-				element();
+				setState(150);
+				_errHandler.sync(this);
+				switch (_input.LA(1)) {
+				case T__10:
+					{
+					setState(145);
+					sizeParameter();
+					}
+					break;
+				case T__9:
+					{
+					setState(146);
+					marginParameter();
+					}
+					break;
+				case T__8:
+					{
+					setState(147);
+					paddingParameter();
+					}
+					break;
+				case T__11:
+					{
+					setState(148);
+					iconParameter();
+					}
+					break;
+				case T__7:
+					{
+					setState(149);
+					colorParameter();
+					}
+					break;
+				default:
+					throw new NoViableAltException(this);
 				}
 				}
-				setState(120);
+				setState(154);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(121);
+			setState(155);
+			match(T__2);
+			setState(159);
+			_errHandler.sync(this);
+			_la = _input.LA(1);
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
+				{
+				{
+				setState(156);
+				element();
+				}
+				}
+				setState(161);
+				_errHandler.sync(this);
+				_la = _input.LA(1);
+			}
+			setState(162);
 			match(T__3);
 			}
 		}
@@ -865,32 +1207,32 @@ public class convorkParser extends Parser {
 
 	public final Search_elementContext search_element() throws RecognitionException {
 		Search_elementContext _localctx = new Search_elementContext(_ctx, getState());
-		enterRule(_localctx, 20, RULE_search_element);
+		enterRule(_localctx, 30, RULE_search_element);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(123);
-			match(T__9);
-			setState(124);
+			setState(164);
+			match(T__14);
+			setState(165);
 			parameters();
-			setState(125);
+			setState(166);
 			match(T__2);
-			setState(129);
+			setState(170);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
 				{
 				{
-				setState(126);
+				setState(167);
 				element();
 				}
 				}
-				setState(131);
+				setState(172);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(132);
+			setState(173);
 			match(T__3);
 			}
 		}
@@ -936,32 +1278,32 @@ public class convorkParser extends Parser {
 
 	public final Carousel_elementContext carousel_element() throws RecognitionException {
 		Carousel_elementContext _localctx = new Carousel_elementContext(_ctx, getState());
-		enterRule(_localctx, 22, RULE_carousel_element);
+		enterRule(_localctx, 32, RULE_carousel_element);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(134);
-			match(T__10);
-			setState(135);
+			setState(175);
+			match(T__15);
+			setState(176);
 			parameters();
-			setState(136);
+			setState(177);
 			match(T__2);
-			setState(140);
+			setState(181);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
 				{
 				{
-				setState(137);
+				setState(178);
 				element();
 				}
 				}
-				setState(142);
+				setState(183);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(143);
+			setState(184);
 			match(T__3);
 			}
 		}
@@ -999,16 +1341,16 @@ public class convorkParser extends Parser {
 
 	public final Text_elementContext text_element() throws RecognitionException {
 		Text_elementContext _localctx = new Text_elementContext(_ctx, getState());
-		enterRule(_localctx, 24, RULE_text_element);
+		enterRule(_localctx, 34, RULE_text_element);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(145);
-			match(T__11);
-			setState(146);
+			setState(186);
+			match(T__16);
+			setState(187);
 			match(CADEIA);
-			setState(147);
-			match(T__12);
+			setState(188);
+			match(T__17);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1053,32 +1395,32 @@ public class convorkParser extends Parser {
 
 	public final Card_elementContext card_element() throws RecognitionException {
 		Card_elementContext _localctx = new Card_elementContext(_ctx, getState());
-		enterRule(_localctx, 26, RULE_card_element);
+		enterRule(_localctx, 36, RULE_card_element);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(149);
-			match(T__13);
-			setState(150);
+			setState(190);
+			match(T__18);
+			setState(191);
 			parameters();
-			setState(151);
+			setState(192);
 			match(T__2);
-			setState(155);
+			setState(196);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
 				{
 				{
-				setState(152);
+				setState(193);
 				element();
 				}
 				}
-				setState(157);
+				setState(198);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(158);
+			setState(199);
 			match(T__3);
 			}
 		}
@@ -1124,32 +1466,32 @@ public class convorkParser extends Parser {
 
 	public final Container_elementContext container_element() throws RecognitionException {
 		Container_elementContext _localctx = new Container_elementContext(_ctx, getState());
-		enterRule(_localctx, 28, RULE_container_element);
+		enterRule(_localctx, 38, RULE_container_element);
 		int _la;
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(160);
-			match(T__14);
-			setState(161);
+			setState(201);
+			match(T__19);
+			setState(202);
 			parameters();
-			setState(162);
+			setState(203);
 			match(T__2);
-			setState(166);
+			setState(207);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__7) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__14) | (1L << T__15))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__12) | (1L << T__13) | (1L << T__14) | (1L << T__15) | (1L << T__16) | (1L << T__18) | (1L << T__19) | (1L << T__20))) != 0)) {
 				{
 				{
-				setState(163);
+				setState(204);
 				element();
 				}
 				}
-				setState(168);
+				setState(209);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
 			}
-			setState(169);
+			setState(210);
 			match(T__3);
 			}
 		}
@@ -1189,16 +1531,16 @@ public class convorkParser extends Parser {
 
 	public final Image_elementContext image_element() throws RecognitionException {
 		Image_elementContext _localctx = new Image_elementContext(_ctx, getState());
-		enterRule(_localctx, 30, RULE_image_element);
+		enterRule(_localctx, 40, RULE_image_element);
 		try {
 			enterOuterAlt(_localctx, 1);
 			{
-			setState(171);
-			match(T__15);
-			setState(172);
+			setState(212);
+			match(T__20);
+			setState(213);
 			parameters();
-			setState(173);
-			match(T__12);
+			setState(214);
+			match(T__17);
 			}
 		}
 		catch (RecognitionException re) {
@@ -1213,56 +1555,74 @@ public class convorkParser extends Parser {
 	}
 
 	public static final String _serializedATN =
-		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\31\u00b2\4\2\t\2"+
+		"\3\u608b\ua72a\u8133\ub9ed\u417c\u3be7\u7786\u5964\3\36\u00db\4\2\t\2"+
 		"\4\3\t\3\4\4\t\4\4\5\t\5\4\6\t\6\4\7\t\7\4\b\t\b\4\t\t\t\4\n\t\n\4\13"+
-		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\3\2\5\2"+
-		"$\n\2\3\2\3\2\5\2(\n\2\3\2\3\2\3\3\5\3-\n\3\3\3\3\3\5\3\61\n\3\3\4\7\4"+
-		"\64\n\4\f\4\16\4\67\13\4\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\7\6A\n\6\f\6"+
-		"\16\6D\13\6\3\6\3\6\3\7\3\7\3\7\3\7\7\7L\n\7\f\7\16\7O\13\7\3\7\3\7\3"+
-		"\b\3\b\3\b\3\b\7\bW\n\b\f\b\16\bZ\13\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t"+
-		"\3\t\3\t\5\tf\n\t\3\n\3\n\3\n\3\n\7\nl\n\n\f\n\16\no\13\n\3\n\3\n\3\13"+
-		"\3\13\3\13\3\13\7\13w\n\13\f\13\16\13z\13\13\3\13\3\13\3\f\3\f\3\f\3\f"+
-		"\7\f\u0082\n\f\f\f\16\f\u0085\13\f\3\f\3\f\3\r\3\r\3\r\3\r\7\r\u008d\n"+
-		"\r\f\r\16\r\u0090\13\r\3\r\3\r\3\16\3\16\3\16\3\16\3\17\3\17\3\17\3\17"+
-		"\7\17\u009c\n\17\f\17\16\17\u009f\13\17\3\17\3\17\3\20\3\20\3\20\3\20"+
-		"\7\20\u00a7\n\20\f\20\16\20\u00aa\13\20\3\20\3\20\3\21\3\21\3\21\3\21"+
-		"\3\21\2\2\22\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \2\2\2\u00b6\2#\3"+
-		"\2\2\2\4,\3\2\2\2\6\65\3\2\2\2\b8\3\2\2\2\n<\3\2\2\2\fG\3\2\2\2\16R\3"+
-		"\2\2\2\20e\3\2\2\2\22g\3\2\2\2\24r\3\2\2\2\26}\3\2\2\2\30\u0088\3\2\2"+
-		"\2\32\u0093\3\2\2\2\34\u0097\3\2\2\2\36\u00a2\3\2\2\2 \u00ad\3\2\2\2\""+
-		"$\5\n\6\2#\"\3\2\2\2#$\3\2\2\2$%\3\2\2\2%\'\5\f\7\2&(\5\16\b\2\'&\3\2"+
-		"\2\2\'(\3\2\2\2()\3\2\2\2)*\7\2\2\3*\3\3\2\2\2+-\5\n\6\2,+\3\2\2\2,-\3"+
-		"\2\2\2-.\3\2\2\2.\60\5\f\7\2/\61\5\16\b\2\60/\3\2\2\2\60\61\3\2\2\2\61"+
-		"\5\3\2\2\2\62\64\5\b\5\2\63\62\3\2\2\2\64\67\3\2\2\2\65\63\3\2\2\2\65"+
-		"\66\3\2\2\2\66\7\3\2\2\2\67\65\3\2\2\289\7\25\2\29:\7\3\2\2:;\7\27\2\2"+
-		";\t\3\2\2\2<=\7\4\2\2=>\5\6\4\2>B\7\5\2\2?A\5\20\t\2@?\3\2\2\2AD\3\2\2"+
-		"\2B@\3\2\2\2BC\3\2\2\2CE\3\2\2\2DB\3\2\2\2EF\7\6\2\2F\13\3\2\2\2GH\7\7"+
-		"\2\2HI\5\6\4\2IM\7\5\2\2JL\5\20\t\2KJ\3\2\2\2LO\3\2\2\2MK\3\2\2\2MN\3"+
-		"\2\2\2NP\3\2\2\2OM\3\2\2\2PQ\7\6\2\2Q\r\3\2\2\2RS\7\b\2\2ST\5\6\4\2TX"+
-		"\7\t\2\2UW\5\20\t\2VU\3\2\2\2WZ\3\2\2\2XV\3\2\2\2XY\3\2\2\2Y[\3\2\2\2"+
-		"ZX\3\2\2\2[\\\7\6\2\2\\\17\3\2\2\2]f\5\22\n\2^f\5\24\13\2_f\5\26\f\2`"+
-		"f\5\30\r\2af\5\32\16\2bf\5\34\17\2cf\5\36\20\2df\5 \21\2e]\3\2\2\2e^\3"+
-		"\2\2\2e_\3\2\2\2e`\3\2\2\2ea\3\2\2\2eb\3\2\2\2ec\3\2\2\2ed\3\2\2\2f\21"+
-		"\3\2\2\2gh\7\n\2\2hi\5\6\4\2im\7\5\2\2jl\5\20\t\2kj\3\2\2\2lo\3\2\2\2"+
-		"mk\3\2\2\2mn\3\2\2\2np\3\2\2\2om\3\2\2\2pq\7\6\2\2q\23\3\2\2\2rs\7\13"+
-		"\2\2st\5\6\4\2tx\7\5\2\2uw\5\20\t\2vu\3\2\2\2wz\3\2\2\2xv\3\2\2\2xy\3"+
-		"\2\2\2y{\3\2\2\2zx\3\2\2\2{|\7\6\2\2|\25\3\2\2\2}~\7\f\2\2~\177\5\6\4"+
-		"\2\177\u0083\7\5\2\2\u0080\u0082\5\20\t\2\u0081\u0080\3\2\2\2\u0082\u0085"+
-		"\3\2\2\2\u0083\u0081\3\2\2\2\u0083\u0084\3\2\2\2\u0084\u0086\3\2\2\2\u0085"+
-		"\u0083\3\2\2\2\u0086\u0087\7\6\2\2\u0087\27\3\2\2\2\u0088\u0089\7\r\2"+
-		"\2\u0089\u008a\5\6\4\2\u008a\u008e\7\5\2\2\u008b\u008d\5\20\t\2\u008c"+
-		"\u008b\3\2\2\2\u008d\u0090\3\2\2\2\u008e\u008c\3\2\2\2\u008e\u008f\3\2"+
-		"\2\2\u008f\u0091\3\2\2\2\u0090\u008e\3\2\2\2\u0091\u0092\7\6\2\2\u0092"+
-		"\31\3\2\2\2\u0093\u0094\7\16\2\2\u0094\u0095\7\27\2\2\u0095\u0096\7\17"+
-		"\2\2\u0096\33\3\2\2\2\u0097\u0098\7\20\2\2\u0098\u0099\5\6\4\2\u0099\u009d"+
-		"\7\5\2\2\u009a\u009c\5\20\t\2\u009b\u009a\3\2\2\2\u009c\u009f\3\2\2\2"+
-		"\u009d\u009b\3\2\2\2\u009d\u009e\3\2\2\2\u009e\u00a0\3\2\2\2\u009f\u009d"+
-		"\3\2\2\2\u00a0\u00a1\7\6\2\2\u00a1\35\3\2\2\2\u00a2\u00a3\7\21\2\2\u00a3"+
-		"\u00a4\5\6\4\2\u00a4\u00a8\7\5\2\2\u00a5\u00a7\5\20\t\2\u00a6\u00a5\3"+
-		"\2\2\2\u00a7\u00aa\3\2\2\2\u00a8\u00a6\3\2\2\2\u00a8\u00a9\3\2\2\2\u00a9"+
-		"\u00ab\3\2\2\2\u00aa\u00a8\3\2\2\2\u00ab\u00ac\7\6\2\2\u00ac\37\3\2\2"+
-		"\2\u00ad\u00ae\7\22\2\2\u00ae\u00af\5\6\4\2\u00af\u00b0\7\17\2\2\u00b0"+
-		"!\3\2\2\2\21#\',\60\65BMXemx\u0083\u008e\u009d\u00a8";
+		"\t\13\4\f\t\f\4\r\t\r\4\16\t\16\4\17\t\17\4\20\t\20\4\21\t\21\4\22\t\22"+
+		"\4\23\t\23\4\24\t\24\4\25\t\25\4\26\t\26\3\2\5\2.\n\2\3\2\3\2\5\2\62\n"+
+		"\2\3\2\3\2\3\3\5\3\67\n\3\3\3\3\3\5\3;\n\3\3\4\7\4>\n\4\f\4\16\4A\13\4"+
+		"\3\5\3\5\3\5\3\5\3\6\3\6\3\6\3\6\7\6K\n\6\f\6\16\6N\13\6\3\6\3\6\3\7\3"+
+		"\7\3\7\3\7\7\7V\n\7\f\7\16\7Y\13\7\3\7\3\7\3\b\3\b\3\b\3\b\7\ba\n\b\f"+
+		"\b\16\bd\13\b\3\b\3\b\3\t\3\t\3\t\3\t\3\t\3\t\3\t\3\t\5\tp\n\t\3\n\3\n"+
+		"\3\n\3\13\3\13\3\13\3\f\3\f\3\f\3\r\3\r\3\r\3\16\3\16\3\16\3\17\3\17\3"+
+		"\17\3\17\7\17\u0085\n\17\f\17\16\17\u0088\13\17\3\17\3\17\7\17\u008c\n"+
+		"\17\f\17\16\17\u008f\13\17\3\17\3\17\3\20\3\20\3\20\3\20\3\20\3\20\7\20"+
+		"\u0099\n\20\f\20\16\20\u009c\13\20\3\20\3\20\7\20\u00a0\n\20\f\20\16\20"+
+		"\u00a3\13\20\3\20\3\20\3\21\3\21\3\21\3\21\7\21\u00ab\n\21\f\21\16\21"+
+		"\u00ae\13\21\3\21\3\21\3\22\3\22\3\22\3\22\7\22\u00b6\n\22\f\22\16\22"+
+		"\u00b9\13\22\3\22\3\22\3\23\3\23\3\23\3\23\3\24\3\24\3\24\3\24\7\24\u00c5"+
+		"\n\24\f\24\16\24\u00c8\13\24\3\24\3\24\3\25\3\25\3\25\3\25\7\25\u00d0"+
+		"\n\25\f\25\16\25\u00d3\13\25\3\25\3\25\3\26\3\26\3\26\3\26\3\26\2\2\27"+
+		"\2\4\6\b\n\f\16\20\22\24\26\30\32\34\36 \"$&(*\2\2\2\u00e2\2-\3\2\2\2"+
+		"\4\66\3\2\2\2\6?\3\2\2\2\bB\3\2\2\2\nF\3\2\2\2\fQ\3\2\2\2\16\\\3\2\2\2"+
+		"\20o\3\2\2\2\22q\3\2\2\2\24t\3\2\2\2\26w\3\2\2\2\30z\3\2\2\2\32}\3\2\2"+
+		"\2\34\u0080\3\2\2\2\36\u0092\3\2\2\2 \u00a6\3\2\2\2\"\u00b1\3\2\2\2$\u00bc"+
+		"\3\2\2\2&\u00c0\3\2\2\2(\u00cb\3\2\2\2*\u00d6\3\2\2\2,.\5\n\6\2-,\3\2"+
+		"\2\2-.\3\2\2\2./\3\2\2\2/\61\5\f\7\2\60\62\5\16\b\2\61\60\3\2\2\2\61\62"+
+		"\3\2\2\2\62\63\3\2\2\2\63\64\7\2\2\3\64\3\3\2\2\2\65\67\5\n\6\2\66\65"+
+		"\3\2\2\2\66\67\3\2\2\2\678\3\2\2\28:\5\f\7\29;\5\16\b\2:9\3\2\2\2:;\3"+
+		"\2\2\2;\5\3\2\2\2<>\5\b\5\2=<\3\2\2\2>A\3\2\2\2?=\3\2\2\2?@\3\2\2\2@\7"+
+		"\3\2\2\2A?\3\2\2\2BC\7\32\2\2CD\7\3\2\2DE\7\34\2\2E\t\3\2\2\2FG\7\4\2"+
+		"\2GH\5\6\4\2HL\7\5\2\2IK\5\20\t\2JI\3\2\2\2KN\3\2\2\2LJ\3\2\2\2LM\3\2"+
+		"\2\2MO\3\2\2\2NL\3\2\2\2OP\7\6\2\2P\13\3\2\2\2QR\7\7\2\2RS\5\6\4\2SW\7"+
+		"\5\2\2TV\5\20\t\2UT\3\2\2\2VY\3\2\2\2WU\3\2\2\2WX\3\2\2\2XZ\3\2\2\2YW"+
+		"\3\2\2\2Z[\7\6\2\2[\r\3\2\2\2\\]\7\b\2\2]^\5\6\4\2^b\7\t\2\2_a\5\20\t"+
+		"\2`_\3\2\2\2ad\3\2\2\2b`\3\2\2\2bc\3\2\2\2ce\3\2\2\2db\3\2\2\2ef\7\6\2"+
+		"\2f\17\3\2\2\2gp\5\34\17\2hp\5\36\20\2ip\5 \21\2jp\5\"\22\2kp\5$\23\2"+
+		"lp\5&\24\2mp\5(\25\2np\5*\26\2og\3\2\2\2oh\3\2\2\2oi\3\2\2\2oj\3\2\2\2"+
+		"ok\3\2\2\2ol\3\2\2\2om\3\2\2\2on\3\2\2\2p\21\3\2\2\2qr\7\n\2\2rs\7\34"+
+		"\2\2s\23\3\2\2\2tu\7\13\2\2uv\7\34\2\2v\25\3\2\2\2wx\7\f\2\2xy\7\34\2"+
+		"\2y\27\3\2\2\2z{\7\r\2\2{|\7\34\2\2|\31\3\2\2\2}~\7\16\2\2~\177\7\34\2"+
+		"\2\177\33\3\2\2\2\u0080\u0086\7\17\2\2\u0081\u0085\5\30\r\2\u0082\u0085"+
+		"\5\26\f\2\u0083\u0085\5\24\13\2\u0084\u0081\3\2\2\2\u0084\u0082\3\2\2"+
+		"\2\u0084\u0083\3\2\2\2\u0085\u0088\3\2\2\2\u0086\u0084\3\2\2\2\u0086\u0087"+
+		"\3\2\2\2\u0087\u0089\3\2\2\2\u0088\u0086\3\2\2\2\u0089\u008d\7\5\2\2\u008a"+
+		"\u008c\5\20\t\2\u008b\u008a\3\2\2\2\u008c\u008f\3\2\2\2\u008d\u008b\3"+
+		"\2\2\2\u008d\u008e\3\2\2\2\u008e\u0090\3\2\2\2\u008f\u008d\3\2\2\2\u0090"+
+		"\u0091\7\6\2\2\u0091\35\3\2\2\2\u0092\u009a\7\20\2\2\u0093\u0099\5\30"+
+		"\r\2\u0094\u0099\5\26\f\2\u0095\u0099\5\24\13\2\u0096\u0099\5\32\16\2"+
+		"\u0097\u0099\5\22\n\2\u0098\u0093\3\2\2\2\u0098\u0094\3\2\2\2\u0098\u0095"+
+		"\3\2\2\2\u0098\u0096\3\2\2\2\u0098\u0097\3\2\2\2\u0099\u009c\3\2\2\2\u009a"+
+		"\u0098\3\2\2\2\u009a\u009b\3\2\2\2\u009b\u009d\3\2\2\2\u009c\u009a\3\2"+
+		"\2\2\u009d\u00a1\7\5\2\2\u009e\u00a0\5\20\t\2\u009f\u009e\3\2\2\2\u00a0"+
+		"\u00a3\3\2\2\2\u00a1\u009f\3\2\2\2\u00a1\u00a2\3\2\2\2\u00a2\u00a4\3\2"+
+		"\2\2\u00a3\u00a1\3\2\2\2\u00a4\u00a5\7\6\2\2\u00a5\37\3\2\2\2\u00a6\u00a7"+
+		"\7\21\2\2\u00a7\u00a8\5\6\4\2\u00a8\u00ac\7\5\2\2\u00a9\u00ab\5\20\t\2"+
+		"\u00aa\u00a9\3\2\2\2\u00ab\u00ae\3\2\2\2\u00ac\u00aa\3\2\2\2\u00ac\u00ad"+
+		"\3\2\2\2\u00ad\u00af\3\2\2\2\u00ae\u00ac\3\2\2\2\u00af\u00b0\7\6\2\2\u00b0"+
+		"!\3\2\2\2\u00b1\u00b2\7\22\2\2\u00b2\u00b3\5\6\4\2\u00b3\u00b7\7\5\2\2"+
+		"\u00b4\u00b6\5\20\t\2\u00b5\u00b4\3\2\2\2\u00b6\u00b9\3\2\2\2\u00b7\u00b5"+
+		"\3\2\2\2\u00b7\u00b8\3\2\2\2\u00b8\u00ba\3\2\2\2\u00b9\u00b7\3\2\2\2\u00ba"+
+		"\u00bb\7\6\2\2\u00bb#\3\2\2\2\u00bc\u00bd\7\23\2\2\u00bd\u00be\7\34\2"+
+		"\2\u00be\u00bf\7\24\2\2\u00bf%\3\2\2\2\u00c0\u00c1\7\25\2\2\u00c1\u00c2"+
+		"\5\6\4\2\u00c2\u00c6\7\5\2\2\u00c3\u00c5\5\20\t\2\u00c4\u00c3\3\2\2\2"+
+		"\u00c5\u00c8\3\2\2\2\u00c6\u00c4\3\2\2\2\u00c6\u00c7\3\2\2\2\u00c7\u00c9"+
+		"\3\2\2\2\u00c8\u00c6\3\2\2\2\u00c9\u00ca\7\6\2\2\u00ca\'\3\2\2\2\u00cb"+
+		"\u00cc\7\26\2\2\u00cc\u00cd\5\6\4\2\u00cd\u00d1\7\5\2\2\u00ce\u00d0\5"+
+		"\20\t\2\u00cf\u00ce\3\2\2\2\u00d0\u00d3\3\2\2\2\u00d1\u00cf\3\2\2\2\u00d1"+
+		"\u00d2\3\2\2\2\u00d2\u00d4\3\2\2\2\u00d3\u00d1\3\2\2\2\u00d4\u00d5\7\6"+
+		"\2\2\u00d5)\3\2\2\2\u00d6\u00d7\7\27\2\2\u00d7\u00d8\5\6\4\2\u00d8\u00d9"+
+		"\7\24\2\2\u00d9+\3\2\2\2\25-\61\66:?LWbo\u0084\u0086\u008d\u0098\u009a"+
+		"\u00a1\u00ac\u00b7\u00c6\u00d1";
 	public static final ATN _ATN =
 		new ATNDeserializer().deserialize(_serializedATN.toCharArray());
 	static {

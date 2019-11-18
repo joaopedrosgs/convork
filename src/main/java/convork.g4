@@ -28,8 +28,15 @@ footer: 'footer'(parameters)'{' element* '};';
 
 element: logo_element|button_element|search_element|carousel_element|text_element|card_element|container_element|image_element;
 
-logo_element: 'logo('parameters'){'element*'};';
-button_element: 'button('parameters'){'element*'};';
+colorParameter: 'color=' CADEIA;
+paddingParameter: 'padding='CADEIA;
+marginParameter: 'margin='CADEIA;
+sizeParameter: 'size=' CADEIA;
+iconParameter: 'icon=' CADEIA;
+
+
+logo_element: 'logo('(sizeParameter|marginParameter|paddingParameter)*'){'element*'};';
+button_element: 'button('(sizeParameter|marginParameter|paddingParameter|iconParameter|colorParameter)*'){'element*'};';
 search_element: 'search('parameters'){'element*'};';
 carousel_element: 'carousel('parameters'){'element*'};';
 text_element: 'text('CADEIA');';

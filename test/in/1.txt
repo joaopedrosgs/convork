@@ -6,7 +6,7 @@ search(){};
 };
 content(){
 carousel(){};
-button(){
+button(color="teal"){
 text("teste");
 };
 };

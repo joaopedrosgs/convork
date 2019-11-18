@@ -6,11 +6,16 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/convork.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/convork.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convork.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convork.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convork.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convork.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkBaseVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.interp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gen/convorkVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/gen/convorkVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/t3/AnalisadorSemantico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/AnalisadorSemantico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/t3/GeradorMaterial.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/t3/GeradorMaterial.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/a.html" beforeDir="false" afterPath="$PROJECT_DIR$/test/a.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/in/1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/test/in/1.txt" afterDir="false" />
     </list>
@@ -284,7 +289,9 @@
       <workItem from="1571400360201" duration="3925000" />
       <workItem from="1571405924110" duration="4520000" />
       <workItem from="1573432554509" duration="4810000" />
-      <workItem from="1573482127884" duration="2075000" />
+      <workItem from="1573482127884" duration="4510000" />
+      <workItem from="1573493406306" duration="1053000" />
+      <workItem from="1574078304670" duration="3412000" />
     </task>
     <servers />
   </component>

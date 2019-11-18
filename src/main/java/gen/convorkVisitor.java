@@ -59,6 +59,36 @@ public interface convorkVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitElement(convorkParser.ElementContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link convorkParser#colorParameter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitColorParameter(convorkParser.ColorParameterContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link convorkParser#paddingParameter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitPaddingParameter(convorkParser.PaddingParameterContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link convorkParser#marginParameter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMarginParameter(convorkParser.MarginParameterContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link convorkParser#sizeParameter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSizeParameter(convorkParser.SizeParameterContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link convorkParser#iconParameter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIconParameter(convorkParser.IconParameterContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link convorkParser#logo_element}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
