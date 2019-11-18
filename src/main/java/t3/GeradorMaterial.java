@@ -73,15 +73,12 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitHeader(convorkParser.HeaderContext ctx) {
-        sp.printCode(" <nav>\n" +
-                "    <div class=\"nav-wrapper\">\n");
+        sp.printCode(" <nav class='light-blue' role='navigation'>\n" +
+                "    <div class=\"nav-wrapper container\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode(" <nav>\n" +
-                "    <div class=\"nav-wrapper\">\n" +
-
-                "    </div>\n" +
+        sp.printCode(" <div>\n" +
                 "  </nav>");
 
 
@@ -91,7 +88,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
     @Override
     public Void visitContent(convorkParser.ContentContext ctx) {
 
-        sp.printCode("<div class='content'>\n");
+        sp.printCode("<div class='content container'>\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -138,7 +135,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitLogo_element(convorkParser.Logo_elementContext ctx) {
-        sp.printCode("<a href=\"#\" class=\"brand-logo\">\n");
+        sp.printCode("<a id='logo-container' href=\"#\" class=\"brand-logo\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -149,25 +146,25 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
-        sp.printCode("<form>\n" +
+        sp.printCode("<div class='right nav-wrapper'><form>\n" +
                 "        <div class=\"input-field\">\n" +
                 "          <input id=\"search\" type=\"search\" required>\n" +
                 "          <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n" +
                 "          <i class=\"material-icons\">close</i>\n" +
                 "        </div>\n" +
-                "      </form>");
+                "      </form></div>");
         return null;
     }
 
     @Override
     public Void visitCarousel_element(convorkParser.Carousel_elementContext ctx) {
         sp.printCode("\n" +
-                "  <div class=\"carousel\">\n" +
-                "    <a class=\"carousel-item\" href=\"#one!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#two!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#three!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#four!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#five!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
+                "  <div class=\"carousel carousel-slider\">\n" +
+                "    <a class=\"carousel-item\" href=\"#one!\"><img src=\"./795-600x300.jpg\"></a>\n" +
+                "    <a class=\"carousel-item\" href=\"#two!\"><img src=\"./795-600x300.jpg\"></a>\n" +
+                "    <a class=\"carousel-item\" href=\"#three!\"><img src=\"./795-600x300.jpg\"></a>\n" +
+                "    <a class=\"carousel-item\" href=\"#four!\"><img src=\"./795-600x300.jpg\"></a>\n" +
+                "    <a class=\"carousel-item\" href=\"#five!\"><img src=\"./795-600x300.jpg\"></a>\n" +
                 "  </div>\n" +
                 "      ");
         script.append("// CAROUSEL\n" +
@@ -176,6 +173,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
                 "  {\n" +
                 "    dist: 0,\n" +
                 "    padding: 0,\n" +
+                "    height:300, \n"+
                 "    fullWidth: true,\n" +
                 "    indicators: true,\n" +
                 "    duration: 100,\n" +
@@ -185,7 +183,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
                 "\n" +
                 "autoplay()   \n" +
                 "function autoplay() {\n" +
-                "    $('.carousel').carousel('next');\n" +
+                "   \n" +
                 "    setTimeout(autoplay, 4500);\n" +
                 "}");
         return super.visitCarousel_element(ctx);
@@ -199,6 +197,37 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
     @Override
     public Void visitContainer_element(convorkParser.Container_elementContext ctx) {
         return super.visitContainer_element(ctx);
+    }
+
+    @Override
+    public Void visitSection_element(convorkParser.Section_elementContext ctx) {
+        sp.printCode("<div class=\"section\">");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</div>");
+        return null;
+
+    }
+
+    @Override
+    public Void visitRow_element(convorkParser.Row_elementContext ctx) {
+        sp.printCode("<div class=\"row\">");
+        for (convorkParser.Col_elementContext element : ctx.col_element()) {
+            visitCol_element(element);
+        }
+        sp.printCode("</div>");
+        return null;
+    }
+
+    @Override
+    public Void visitCol_element(convorkParser.Col_elementContext ctx) {
+        sp.printCode("<div class=\"col\">");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</div>");
+        return null;
     }
 
     @Override

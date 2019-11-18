@@ -136,4 +136,22 @@ public interface convorkVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitImage_element(convorkParser.Image_elementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link convorkParser#section_element}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSection_element(convorkParser.Section_elementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link convorkParser#row_element}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRow_element(convorkParser.Row_elementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link convorkParser#col_element}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCol_element(convorkParser.Col_elementContext ctx);
 }

@@ -217,4 +217,34 @@ public interface convorkListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitImage_element(convorkParser.Image_elementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link convorkParser#section_element}.
+	 * @param ctx the parse tree
+	 */
+	void enterSection_element(convorkParser.Section_elementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#section_element}.
+	 * @param ctx the parse tree
+	 */
+	void exitSection_element(convorkParser.Section_elementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link convorkParser#row_element}.
+	 * @param ctx the parse tree
+	 */
+	void enterRow_element(convorkParser.Row_elementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#row_element}.
+	 * @param ctx the parse tree
+	 */
+	void exitRow_element(convorkParser.Row_elementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link convorkParser#col_element}.
+	 * @param ctx the parse tree
+	 */
+	void enterCol_element(convorkParser.Col_elementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#col_element}.
+	 * @param ctx the parse tree
+	 */
+	void exitCol_element(convorkParser.Col_elementContext ctx);
 }

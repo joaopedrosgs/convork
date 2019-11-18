@@ -1,12 +1,26 @@
-header(){
-logo(){
-text("Logo");
+header() {
+  logo() {
+    text("Logo");
+  };
+  search() {};
 };
-search(){};
+content() {
+ section() {
+    row() {
+      col() {
+        button(color = "teal") {
+          text("teste");
+        };
+      };
+      col() {
+              button(color = "blue") {
+                text("teste2");
+              };
+        };
+    };
+  };
+  section() {
+  carousel() {};
 };
-content(){
-carousel(){};
-button(color="teal"){
-text("teste");
-};
+
 };

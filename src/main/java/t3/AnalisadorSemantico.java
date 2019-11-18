@@ -4,9 +4,10 @@ package t3;
 import gen.convorkBaseVisitor;
 import gen.convorkParser;
 
+import java.util.List;
+
 public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     private PilhaDeTabelas pilhaDeTabelas;
-
     private SaidaParser sp;
 
     public AnalisadorSemantico(SaidaParser sp) {
@@ -91,6 +92,7 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
 
     @Override
     public String visitButton_element(convorkParser.Button_elementContext ctx) {
+
         for(convorkParser.ElementContext element : ctx.element())  {
             if(element.text_element()==null ) {
                 sp.print("Linha "+element.start.getLine()+": Botão deve possuir apenas texto");

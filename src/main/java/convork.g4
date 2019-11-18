@@ -22,27 +22,30 @@ source: header? content footer?;
 parameters:parameter*;
 parameter: Identifier '=' CADEIA;
 
-header: 'header('parameters'){' element* '};';
-content: 'content('parameters'){' element* '};';
-footer: 'footer'(parameters)'{' element* '};';
+header: 'header('parameters')' '{' element* '};';
+content: 'content('parameters')' '{' element* '};';
+footer: 'footer(' parameters')' '{' element* '};';
 
-element: logo_element|button_element|search_element|carousel_element|text_element|card_element|container_element|image_element;
+element: logo_element|button_element|search_element|carousel_element|text_element|section_element|row_element|col_element|card_element|container_element|image_element;
 
-colorParameter: 'color=' CADEIA;
-paddingParameter: 'padding='CADEIA;
-marginParameter: 'margin='CADEIA;
-sizeParameter: 'size=' CADEIA;
-iconParameter: 'icon=' CADEIA;
+colorParameter: 'color''=' CADEIA;
+paddingParameter: 'padding''='CADEIA;
+marginParameter: 'margin''='CADEIA;
+sizeParameter: 'size''=' CADEIA;
+iconParameter: 'icon''=' CADEIA;
 
 
-logo_element: 'logo('(sizeParameter|marginParameter|paddingParameter)*'){'element*'};';
-button_element: 'button('(sizeParameter|marginParameter|paddingParameter|iconParameter|colorParameter)*'){'element*'};';
-search_element: 'search('parameters'){'element*'};';
-carousel_element: 'carousel('parameters'){'element*'};';
+logo_element: 'logo('(sizeParameter|marginParameter|paddingParameter)*')' '{'element*'};';
+button_element: 'button('(sizeParameter|marginParameter|paddingParameter|iconParameter|colorParameter)*')''{'element*'};';
+search_element: 'search('parameters')''{'element*'};';
+carousel_element: 'carousel('parameters')''{'element*'};';
 text_element: 'text('CADEIA');';
-card_element: 'card('parameters'){'element*'};';
-container_element: 'container('parameters'){'element*'};';
+card_element: 'card('parameters')''{'element*'};';
+container_element: 'container('parameters')''{'element*'};';
 image_element: 'image('parameters');';
+section_element: 'section('parameters')''{'element*'};';
+row_element: 'row('parameters')''{'col_element*'};';
+col_element: 'col('parameters')''{'element*'};';
 
 COMENTARIO: '/*' ~('}'|'\n'|'\r')* '*/' -> skip;
 
