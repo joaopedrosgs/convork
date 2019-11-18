@@ -89,7 +89,7 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
     @Override
     public Void visitContent(convorkParser.ContentContext ctx) {
 
-        sp.printCode("<div class='content'>\n");
+        sp.printCode("<div class='container'>\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -103,11 +103,11 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
     @Override
     public Void visitButton_element(convorkParser.Button_elementContext ctx) {
 
-        sp.printCode("  <a class=\"waves-effect waves-teal btn-flat\">\n\n");
+        sp.printCode("  <button type=\"button\" class=\"btn btn-primary\">\n\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode("</a>\n");
+        sp.printCode("</button>\n");
 
         return null;
     }
