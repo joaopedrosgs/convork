@@ -20,7 +20,11 @@ content() {
     };
   };
   section() {
-  carousel() {};
+  carousel() {
+    image(href = "https://cdn4.buysellads.net/uu/1/41312/1545083324-1539370929-mailchimp-Yellow-260x200.png");
+    image(href = "https://cdn4.buysellads.net/uu/1/41312/1545083324-1539370929-mailchimp-Yellow-260x200.png");
+    image(href = "https://cdn4.buysellads.net/uu/1/41312/1545083324-1539370929-mailchimp-Yellow-260x200.png");
+  };
 };
 
 };

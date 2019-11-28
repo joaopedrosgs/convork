@@ -8,6 +8,7 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     private SaidaParser sp;
     private StringBuilder script;
+    private Integer carouselCount = 0;
 
     public GeradorBootstrap(SaidaParser sp) {
         this.sp = sp;
@@ -16,17 +17,20 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitProgram(convorkParser.ProgramContext ctx) {
-
-        sp.printCode("<!DOCTYPE html>\n" +
-                "<html>\n" +
-                "<head>\n" +
-                "<!--Import bootstrap.css-->\n" +
-                "<link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n" +
-                "<!--Let browser know website is optimized for mobile-->\n" +
-                "<meta charset=\"utf-8\">\n" +
-                "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"/>\n" +
-                "</head>\n" +
-                "<body>");
+        sp.printCode("<!doctype html>\n" +
+                "<html lang=\"en\">\n" +
+                "  <head>\n" +
+                "    <!-- Required meta tags -->\n" +
+                "    <meta charset=\"utf-8\">\n" +
+                "    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">\n" +
+                "\n" +
+                "    <!-- Bootstrap CSS -->\n" +
+                "    <link rel=\"stylesheet\" href=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css\" integrity=\"sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T\" crossorigin=\"anonymous\">\n" +
+                "\n" +
+                "    <title>Hello, world!</title>\n" +
+                "  </head>\n" +
+                "  <body>\n"
+                );
         if (ctx.header() != null) {
             visitHeader(ctx.header());
         }
@@ -35,12 +39,12 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
         if (ctx.footer() != null) {
             visitFooter(ctx.footer());
         }
-        sp.printCode("<script\n" +
-                "<script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n" +
-                "<script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n" +
-                "<script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n" +
-                "<script>"+script.toString()+"</script>"+
-                "</body>\n" +
+        sp.printCode("    <!-- Optional JavaScript -->\n" +
+                "    <!-- jQuery first, then Popper.js, then Bootstrap JS -->\n" +
+                "    <script src=\"https://code.jquery.com/jquery-3.3.1.slim.min.js\" integrity=\"sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo\" crossorigin=\"anonymous\"></script>\n" +
+                "    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" integrity=\"sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1\" crossorigin=\"anonymous\"></script>\n" +
+                "    <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" integrity=\"sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM\" crossorigin=\"anonymous\"></script>\n" +
+                "  </body>\n" +
                 "</html>\n");
 
         return null;
@@ -76,10 +80,7 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode(" <nav>\n" +
-                "    <div class=\"nav-wrapper\">\n" +
-
-                "    </div>\n" +
+        sp.printCode("</div>\n" +
                 "  </nav>");
 
 
@@ -132,57 +133,89 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitLogo_element(convorkParser.Logo_elementContext ctx) {
-        sp.printCode("<a href=\"#\" class=\"brand-logo\">\n");
+        sp.printCode("<a class=\"navbar-brand\" href=\"#\">Navbar</a>\n" +
+                "\n" +
+                "      <!-- Collapse button -->\n" +
+                "      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#basicExampleNav\" aria-controls=\"basicExampleNav\"\n" +
+                "        aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n" +
+                "        <span class=\"navbar-toggler-icon\"></span>\n" +
+                "      </button>\n" +
+                "\n" +
+                "      <!-- Collapsible content -->\n" +
+                "      <div class=\"collapse navbar-collapse\" id=\"basicExampleNav\">\n" +
+                "\n" +
+                "        <!-- Links -->\n" +
+                "        <ul class=\"navbar-nav mr-auto\">\n" +
+                "          <li class=\"nav-item active\">\n" +
+                "            <a class=\"nav-link\" href=\"#\">Home\n" +
+                "              <span class=\"sr-only\">(current)</span>\n" +
+                "            </a>\n" +
+                "          </li>\n" +
+                "          <li class=\"nav-item\">\n" +
+                "            <a class=\"nav-link\" href=\"#\">Features</a>\n" +
+                "          </li>\n" +
+                "          <!-- Dropdown -->\n" +
+                "          <li class=\"nav-item dropdown\">\n" +
+                "            <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdownMenuLink1\" data-toggle=\"dropdown\" aria-haspopup=\"true\"\n" +
+                "              aria-expanded=\"false\">Dropdown 1</a>\n" +
+                "            <div class=\"dropdown-menu dropdown-primary\" aria-labelledby=\"navbarDropdownMenuLink1\">\n" +
+                "              <a class=\"dropdown-item\" href=\"#\">Action</a>\n" +
+                "              <a class=\"dropdown-item\" href=\"#\">Another action</a>\n" +
+                "              <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n" +
+                "            </div>\n" +
+                "          </li>\n" +
+                "\n" +
+                "        </ul>\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode("</a>");
+        //sp.printCode("</a>");
 
         return null;
     }
 
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
-        sp.printCode("<form>\n" +
-                "        <div class=\"input-field\">\n" +
-                "          <input id=\"search\" type=\"search\" required>\n" +
-                "          <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n" +
-                "          <i class=\"material-icons\">close</i>\n" +
-                "        </div>\n" +
-                "      </form>");
+        sp.printCode("<form class=\"form-inline\">\n" +
+                "          <div class=\"md-form my-0\">\n" +
+                "            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\n" +
+                "          </div>\n" +
+                "        </form>");
         return null;
     }
 
     @Override
     public Void visitCarousel_element(convorkParser.Carousel_elementContext ctx) {
-        sp.printCode("\n" +
-                "  <div class=\"carousel\">\n" +
-                "    <a class=\"carousel-item\" href=\"#one!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#two!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#three!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#four!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#five!\"><img src=\"/home/pedro/Downloads/4598.png\"></a>\n" +
-                "  </div>\n" +
-                "      ");
-        script.append("// CAROUSEL\n" +
-                "$(document).ready(function(){\n" +
-                "  $('.carousel').carousel(\n" +
-                "  {\n" +
-                "    dist: 0,\n" +
-                "    padding: 0,\n" +
-                "    fullWidth: true,\n" +
-                "    indicators: true,\n" +
-                "    duration: 100,\n" +
-                "  }\n" +
-                "  );\n" +
-                "});\n" +
-                "\n" +
-                "autoplay()   \n" +
-                "function autoplay() {\n" +
-                "    $('.carousel').carousel('next');\n" +
-                "    setTimeout(autoplay, 4500);\n" +
-                "}");
-        return super.visitCarousel_element(ctx);
+        sp.printCode(
+            "<div id=\"carousel" + carouselCount + "\" class=\"carousel slide\" data-ride=\"carousel\">\n" +
+            "  <div class=\"carousel-inner\">\n");
+        Boolean isFirst = true;
+        for (convorkParser.ElementContext image: ctx.element()) {
+            if (isFirst) {
+                sp.printCode(
+                        "    <div class=\"carousel-item active");
+                isFirst = false;
+            } else {
+                sp.printCode(
+                        "    <div class=\"carousel-item");
+            }
+            sp.printCode("\">\n" +
+            "    <img class=\"d-block w-100\" src=\""+ "https://cdn4.buysellads.net/uu/1/41312/1545083324-1539370929-mailchimp-Yellow-260x200.png" +"\" alt=\"First slide\">\n" +
+            "    </div>\n");
+        }
+        sp.printCode(
+            "  </div>\n" +
+            "  <a class=\"carousel-control-prev\" href=\"#carousel" + carouselCount +"\" role=\"button\" data-slide=\"prev\">\n" +
+            "    <span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>\n" +
+            "    <span class=\"sr-only\">Previous</span>\n" +
+            "  </a>\n" +
+            "  <a class=\"carousel-control-next\" href=\"#carousel" + carouselCount +"\" role=\"button\" data-slide=\"next\">\n" +
+            "    <span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>\n" +
+            "    <span class=\"sr-only\">Next</span>\n" +
+            "  </a>\n" +
+            "</div>");
+        carouselCount++;
+        return null;
     }
 
     @Override
