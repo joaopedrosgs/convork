@@ -4,8 +4,6 @@ package t3;
 import gen.convorkBaseVisitor;
 import gen.convorkParser;
 
-import java.util.List;
-
 public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     private PilhaDeTabelas pilhaDeTabelas;
     private SaidaParser sp;

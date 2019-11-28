@@ -172,6 +172,18 @@ public class convorkBaseListener implements convorkListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterHrefParameter(convorkParser.HrefParameterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitHrefParameter(convorkParser.HrefParameterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLogo_element(convorkParser.Logo_elementContext ctx) { }
 	/**
 	 * {@inheritDoc}

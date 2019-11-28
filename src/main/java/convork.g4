@@ -33,6 +33,7 @@ paddingParameter: 'padding''='CADEIA;
 marginParameter: 'margin''='CADEIA;
 sizeParameter: 'size''=' CADEIA;
 iconParameter: 'icon''=' CADEIA;
+hrefParameter: 'href''=' CADEIA;
 
 
 logo_element: 'logo('(sizeParameter|marginParameter|paddingParameter)*')' '{'element*'};';
@@ -42,7 +43,7 @@ carousel_element: 'carousel('parameters')''{'element*'};';
 text_element: 'text('CADEIA');';
 card_element: 'card('parameters')''{'element*'};';
 container_element: 'container('parameters')''{'element*'};';
-image_element: 'image('parameters');';
+image_element: 'image('hrefParameter');';
 section_element: 'section('parameters')''{'element*'};';
 row_element: 'row('parameters')''{'col_element*'};';
 col_element: 'col('parameters')''{'element*'};';
