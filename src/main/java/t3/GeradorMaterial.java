@@ -140,7 +140,6 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
             visitElement(element);
         }
         sp.printCode("</a>");
-
         return null;
     }
 
@@ -158,15 +157,11 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitCarousel_element(convorkParser.Carousel_elementContext ctx) {
-        sp.printCode("\n" +
-                "  <div class=\"carousel carousel-slider\">\n" +
-                "    <a class=\"carousel-item\" href=\"#one!\"><img src=\"./795-600x300.jpg\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#two!\"><img src=\"./795-600x300.jpg\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#three!\"><img src=\"./795-600x300.jpg\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#four!\"><img src=\"./795-600x300.jpg\"></a>\n" +
-                "    <a class=\"carousel-item\" href=\"#five!\"><img src=\"./795-600x300.jpg\"></a>\n" +
-                "  </div>\n" +
-                "      ");
+        sp.printCode("<div class=\"carousel carousel-slider\">\n");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            sp.printCode(" <a class=\"carousel-item\" href=\"#one!\"><img src="+element.image_element().hrefParameter().CADEIA().getText()+"></a>");
+        }
+        sp.printCode("</div>");
         script.append("// CAROUSEL\n" +
                 "$(document).ready(function(){\n" +
                 "  $('.carousel').carousel(\n" +
@@ -186,7 +181,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
                 "   \n" +
                 "    setTimeout(autoplay, 4500);\n" +
                 "}");
-        return super.visitCarousel_element(ctx);
+        return null;
     }
 
     @Override
