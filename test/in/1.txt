@@ -5,7 +5,7 @@ header() {
   search() {};
 };
 content() {
- section() {
+  section() {
     row() {
       col() {
         button(color = "teal") {
@@ -13,18 +13,40 @@ content() {
         };
       };
       col() {
-              button(color = "blue") {
-                text("teste2");
-              };
+        button(color = "blue") {
+          text("teste2");
         };
+      };
     };
   };
   section() {
-  carousel() {
-    image(href = "795-600x300.jpg");
-    image(href = "795-600x300.jpg");
-    image(href = "795-600x300.jpg");
+    carousel() {
+      image(href = "795-600x300.jpg");
+      image(href = "795-600x300.jpg");
+      image(href = "795-600x300.jpg");
+    };
   };
 };
-
+footer() {
+  container() {
+  section() {
+    row() {
+      col() {
+        button(color = "teal") {
+          text("teste");
+        };
+      };
+      col() {
+        button(color = "blue") {
+          text("teste2");
+        };
+      };
+    };
+    row() {
+      col() {
+        text("teste");
+      };
+    };
+  };
+  };
 };

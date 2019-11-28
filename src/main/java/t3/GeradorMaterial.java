@@ -125,7 +125,13 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitFooter(convorkParser.FooterContext ctx) {
-        return super.visitFooter(ctx);
+
+        sp.printCode(" <footer class=\"page-footer\">\n");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</footer>");
+        return null;
     }
 
     @Override
@@ -191,7 +197,12 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitContainer_element(convorkParser.Container_elementContext ctx) {
-        return super.visitContainer_element(ctx);
+        sp.printCode("<div class=\"container\">");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</div>");
+        return null;
     }
 
     @Override
