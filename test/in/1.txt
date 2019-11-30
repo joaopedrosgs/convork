@@ -37,7 +37,7 @@ footer() {
         };
       };
       col() {
-        button(color = "primary") {
+        button(color = "primary" size="large") {
           text("teste2");
         };
       };

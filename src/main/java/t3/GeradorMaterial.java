@@ -3,15 +3,36 @@ package t3;
 import gen.convorkBaseVisitor;
 import gen.convorkParser;
 
+import java.util.HashMap;
+
 public class GeradorMaterial extends convorkBaseVisitor<Void> {
     private PilhaDeTabelas pilhaDeTabelas;
 
     private SaidaParser sp;
     private StringBuilder script;
 
+    private HashMap<String, String> ButtonColor;
+    private HashMap<String, String> ButtonSize;
+
     public GeradorMaterial(SaidaParser sp) {
         this.sp = sp;
         script = new StringBuilder();
+        ButtonSize = new HashMap<String,String>();
+        ButtonSize.put("small", "btn-small");
+        ButtonSize.put("normal", "btn");
+        ButtonSize.put("medium", "btn-large");
+        ButtonSize.put("large", "btn-large");
+        ButtonColor = new HashMap<String,String>();
+        ButtonColor.put("primary","blue darken-2");
+        ButtonColor.put("secondary","grey darken-1");
+        ButtonColor.put("success","green darken-1");
+        ButtonColor.put("danger","red darken-1");
+        ButtonColor.put("warning","yellow");
+        ButtonColor.put("info","blue");
+        ButtonColor.put("light","grey lighten-4");
+        ButtonColor.put("dark"," grey darken-3");
+
+
     }
 
     @Override
@@ -102,11 +123,15 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
     @Override
     public Void visitButton_element(convorkParser.Button_elementContext ctx) {
         String color="";
+        String size="btn";
         if(ctx.colorParameter(0)!=null) {
-            color = ctx.colorParameter(0).CADEIA().getText().substring(1, ctx.colorParameter(0).CADEIA().getText().length() - 1);
+            color = ButtonColor.get(ctx.colorParameter(0).CADEIA().getText().substring(1, ctx.colorParameter(0).CADEIA().getText().length() - 1));
+        }
+        if(ctx.sizeParameter(0)!=null) {
+            size = ButtonSize.get(ctx.sizeParameter(0).CADEIA().getText().substring(1, ctx.sizeParameter(0).CADEIA().getText().length() - 1));
         }
 
-        sp.printCode("  <a class=\"waves-effect waves-light "+color+" btn-flat\">\n\n");
+        sp.printCode("  <a class=\"waves-effect waves-light "+color+" "+size+"\">\n\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
