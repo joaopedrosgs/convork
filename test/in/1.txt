@@ -8,12 +8,12 @@ content() {
   section() {
     row() {
       col() {
-        button(color = "teal") {
+        button(color = "primary") {
           text("teste");
         };
       };
       col() {
-        button(color = "blue") {
+        button(color = "primary") {
           text("teste2");
         };
       };
@@ -32,12 +32,12 @@ footer() {
   section() {
     row() {
       col() {
-        button(color = "teal") {
+        button(color = "primary") {
           text("teste");
         };
       };
       col() {
-        button(color = "blue") {
+        button(color = "primary") {
           text("teste2");
         };
       };

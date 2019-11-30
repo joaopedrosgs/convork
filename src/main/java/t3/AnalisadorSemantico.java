@@ -4,12 +4,58 @@ package t3;
 import gen.convorkBaseVisitor;
 import gen.convorkParser;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 public class AnalisadorSemantico extends convorkBaseVisitor<String> {
-    private PilhaDeTabelas pilhaDeTabelas;
     private SaidaParser sp;
+    private HashSet<String> Colors;
+    private HashSet<String> Margin;
+    private HashSet<String> Padding;
+    private HashSet<String> Size;
+    private HashSet<String> Icon;
+
+
 
     public AnalisadorSemantico(SaidaParser sp) {
         this.sp = sp;
+        Colors = new HashSet<String>();
+        Colors.add("primary");
+        Colors.add("secondary");
+        Colors.add("success");
+        Colors.add("danger");
+        Colors.add("warning");
+        Colors.add("info");
+        Colors.add("light");
+        Colors.add("dark");
+
+        Margin = new HashSet<String>();
+        Margin.add("none");
+        Margin.add("normal");
+        Margin.add("medium");
+        Margin.add("large");
+        Margin.add("auto");
+
+        Padding = new HashSet<String>();
+        Padding.add("none");
+        Padding.add("normal");
+        Padding.add("medium");
+        Padding.add("large");
+        Padding.add("auto");
+
+        Size = new HashSet<String>();
+        Size.add("small");
+        Size.add("normal");
+        Size.add("medium");
+        Size.add("large");
+
+        Size = new HashSet<String>();
+        Size.add("small");
+        Size.add("normal");
+        Size.add("medium");
+        Size.add("large");
+
     }
 
     @Override
@@ -65,22 +111,34 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
 
     @Override
     public String visitColorParameter(convorkParser.ColorParameterContext ctx) {
-        return super.visitColorParameter(ctx);
+        if(!Colors.contains(ctx.CADEIA().getText().substring(1,ctx.CADEIA().getText().length()-1)))
+            sp.println("Linha "+ctx.start.getLine()+": Valor inválido no parametro 'color'!");
+        return "";
     }
 
     @Override
     public String visitPaddingParameter(convorkParser.PaddingParameterContext ctx) {
-        return super.visitPaddingParameter(ctx);
+
+        if(!Padding.contains(ctx.CADEIA().getText().substring(1,ctx.CADEIA().getText().length()-1)))
+            sp.println("Linha "+ctx.start.getLine()+": Valor inválido no parametro 'padding'!");
+        return "";
+
     }
 
     @Override
     public String visitMarginParameter(convorkParser.MarginParameterContext ctx) {
-        return super.visitMarginParameter(ctx);
+
+        if(!Margin.contains(ctx.CADEIA().getText().substring(1,ctx.CADEIA().getText().length()-1)))
+            sp.println("Linha "+ctx.start.getLine()+": Valor inválido no parametro 'margin'!");
+        return "";
     }
 
     @Override
     public String visitSizeParameter(convorkParser.SizeParameterContext ctx) {
-        return super.visitSizeParameter(ctx);
+
+        if(!Size.contains(ctx.CADEIA().getText().substring(1,ctx.CADEIA().getText().length()-1)))
+            sp.println("Linha "+ctx.start.getLine()+": Valor inválido no parametro 'size'!");
+        return "";
     }
 
     @Override
