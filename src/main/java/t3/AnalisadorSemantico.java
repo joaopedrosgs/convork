@@ -17,6 +17,17 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     private HashSet<String> Icon;
 
 
+    public static boolean isNumeric(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+    }
 
     public AnalisadorSemantico(SaidaParser sp) {
         this.sp = sp;
@@ -192,5 +203,13 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     @Override
     public String visitImage_element(convorkParser.Image_elementContext ctx) {
         return super.visitImage_element(ctx);
+    }
+
+    @Override
+    public String visitSpacingParameter(convorkParser.SpacingParameterContext ctx) {
+        if(!isNumeric(ctx.CADEIA().getText().substring(1,ctx.CADEIA().getText().length()-1))) {
+            sp.print("Linha "+ctx.start.getLine()+": o parametro 'spacing' deve possuir um valor numérico");
+        }
+        return "";
     }
 }

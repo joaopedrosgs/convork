@@ -148,6 +148,16 @@ public interface convorkListener extends ParseTreeListener {
 	 */
 	void exitHrefParameter(convorkParser.HrefParameterContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link convorkParser#spacingParameter}.
+	 * @param ctx the parse tree
+	 */
+	void enterSpacingParameter(convorkParser.SpacingParameterContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link convorkParser#spacingParameter}.
+	 * @param ctx the parse tree
+	 */
+	void exitSpacingParameter(convorkParser.SpacingParameterContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link convorkParser#logo_element}.
 	 * @param ctx the parse tree
 	 */

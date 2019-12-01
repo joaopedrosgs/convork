@@ -95,6 +95,12 @@ public interface convorkVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitHrefParameter(convorkParser.HrefParameterContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link convorkParser#spacingParameter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitSpacingParameter(convorkParser.SpacingParameterContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link convorkParser#logo_element}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

@@ -26,7 +26,7 @@ header: 'header('parameters')' '{' element* '};';
 content: 'content('parameters')' '{' element* '};';
 footer: 'footer(' parameters')' '{' element* '};';
 
-element: logo_element|button_element|search_element|carousel_element|text_element|section_element|row_element|col_element|card_element|container_element|image_element;
+element: logo_element|button_element|search_element|spacingParameter|carousel_element|text_element|section_element|row_element|col_element|card_element|container_element|image_element|sizeParameter;
 
 colorParameter: 'color''=' CADEIA;
 paddingParameter: 'padding''='CADEIA;
@@ -34,6 +34,7 @@ marginParameter: 'margin''='CADEIA;
 sizeParameter: 'size''=' CADEIA;
 iconParameter: 'icon''=' CADEIA;
 hrefParameter: 'href''=' CADEIA;
+spacingParameter: 'spacing' '=' CADEIA;
 
 
 logo_element: 'logo('(sizeParameter|marginParameter|paddingParameter)*')' '{'element*'};';
@@ -45,8 +46,8 @@ card_element: 'card('parameters')''{'element*'};';
 container_element: 'container('parameters')''{'element*'};';
 image_element: 'image('hrefParameter');';
 section_element: 'section('parameters')''{'element*'};';
-row_element: 'row('parameters')''{'col_element*'};';
-col_element: 'col('parameters')''{'element*'};';
+row_element: 'row('spacingParameter?')''{'col_element*'};';
+col_element: 'col('spacingParameter?')''{'element*'};';
 
 COMENTARIO: '/*' ~('}'|'\n'|'\r')* '*/' -> skip;
 

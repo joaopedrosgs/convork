@@ -184,6 +184,18 @@ public class convorkBaseListener implements convorkListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterSpacingParameter(convorkParser.SpacingParameterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitSpacingParameter(convorkParser.SpacingParameterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterLogo_element(convorkParser.Logo_elementContext ctx) { }
 	/**
 	 * {@inheritDoc}

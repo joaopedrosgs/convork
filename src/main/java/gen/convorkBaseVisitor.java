@@ -115,6 +115,13 @@ public class convorkBaseVisitor<T> extends AbstractParseTreeVisitor<T> implement
 	 * <p>The default implementation returns the result of calling
 	 * {@link #visitChildren} on {@code ctx}.</p>
 	 */
+	@Override public T visitSpacingParameter(convorkParser.SpacingParameterContext ctx) { return visitChildren(ctx); }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation returns the result of calling
+	 * {@link #visitChildren} on {@code ctx}.</p>
+	 */
 	@Override public T visitLogo_element(convorkParser.Logo_elementContext ctx) { return visitChildren(ctx); }
 	/**
 	 * {@inheritDoc}
