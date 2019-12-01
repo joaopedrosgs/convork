@@ -94,12 +94,20 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitHeader(convorkParser.HeaderContext ctx) {
-        sp.printCode(" <nav class='light-blue' role='navigation'>\n" +
-                "    <div class=\"nav-wrapper container\">\n");
-        for (convorkParser.ElementContext element : ctx.element()) {
-            visitElement(element);
+        sp.printCode("<nav class='light-blue' role='navigation'>\n" +
+                "    <div class=\"nav-wrapper\">\n");
+
+        if (ctx.element(0).logo_element() != null) {
+            visitElement(ctx.element(0));
         }
-        sp.printCode(" <div>\n" +
+
+        sp.printCode("<ul class=\"right hide-on-med-and-down\">");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            if (element.logo_element() == null) {
+                visitElement(element);
+            }
+        }
+        sp.printCode("\n</div>\n" +
                 "  </nav>\n");
 
 
@@ -124,6 +132,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
     public Void visitButton_element(convorkParser.Button_elementContext ctx) {
         String color="";
         String size="btn";
+
         if(ctx.colorParameter(0)!=null) {
             color = ButtonColor.get(ctx.colorParameter(0).CADEIA().getText().substring(1, ctx.colorParameter(0).CADEIA().getText().length() - 1));
         }
@@ -131,11 +140,20 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
             size = ButtonSize.get(ctx.sizeParameter(0).CADEIA().getText().substring(1, ctx.sizeParameter(0).CADEIA().getText().length() - 1));
         }
 
-        sp.printCode("  <a class=\"waves-effect waves-light "+color+" "+size+"\">\n\n");
-        for (convorkParser.ElementContext element : ctx.element()) {
-            visitElement(element);
+        // Button from navbar
+        if (ctx.getParent().getParent().getClass() == convorkParser.HeaderContext.class) {
+            sp.printCode("<li><a href=\"#\" class=\"btn "+color+" "+size+"\">");
+                for (convorkParser.ElementContext element : ctx.element()) {
+                    visitElement(element);
+                }
+            sp.printCode("</a></li>\n");
+        } else {
+            sp.printCode("<a class=\"waves-effect waves-light " + color + " " + size + "\">\n\n");
+            for (convorkParser.ElementContext element : ctx.element()) {
+                visitElement(element);
+            }
+            sp.printCode("</a>\n");
         }
-        sp.printCode("</a>\n");
 
         return null;
     }
@@ -176,13 +194,14 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
-        sp.printCode("<div class='right nav-wrapper'><form>\n" +
-                "        <div class=\"input-field\">\n" +
-                "          <input id=\"search\" type=\"search\" required>\n" +
+        sp.printCode(
+                "      </ul>\n<form style=\"margin-left:200px;\">\n" +
+                "        <div class=\"input-field\" style=\"max-width:200px;\">\n" +
+                "          <input id=\"search\" type=\"search\"  required>\n" +
                 "          <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n" +
                 "          <i class=\"material-icons\">close</i>\n" +
                 "        </div>\n" +
-                "      </form></div>");
+                "      </form>");
         return null;
     }
 

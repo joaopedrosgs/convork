@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<!--Let browser know website is optimized for mobile-->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body><nav class='light-blue' role='navigation'>
+    <div class="nav-wrapper">
+<a id='logo-container' href="#" class="brand-logo">
+Teste</a>
+<ul class="right hide-on-med-and-down"><li><a href="#" class="btn  btn >sec1</li></a>
+<li><a href="#" class="btn  btn >sec2</li></a>
+      </ul>
+<form>
+        <div class="input-field">
+          <input id="search" type="search" required>
+          <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+          <i class="material-icons">close</i>
+        </div>
+      </form>
+</div>
+  </nav>
+<div class='content container'>
+<div class="section">
+<div class="row s2">
+<div class="col ">
+<a class="waves-effect waves-light blue darken-2 btn">
+
+teste</a>
+</div><div class="col ">
+<a class="waves-effect waves-light grey darken-1 btn">
+
+teste2</a>
+</div></div>
+</div>
+<div class="section">
+<div class="carousel carousel-slider">
+ <a class="carousel-item" href="#one!"><img src="../../test/795-600x300.jpg"></a> <a class="carousel-item" href="#one!"><img src="https://cdn4.buysellads.net/uu/1/41312/1545083324-1539370929-mailchimp-Yellow-260x200.png"></a> <a class="carousel-item" href="#one!"><img src="../../test/795-600x300.jpg"></a></div></div>
+</div>
+ <footer class="page-footer">
+<div class="container">
+<div class="section">
+<div class="row ">
+<div class="col ">
+<a class="waves-effect waves-light blue darken-2 btn">
+
+teste</a>
+</div><div class="col s2">
+<a class="waves-effect waves-light blue darken-2 btn-large">
+
+teste2</a>
+</div></div>
+<div class="row ">
+<div class="col ">
+teste</div></div>
+</div>
+</div>
+</footer>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script> <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script>// CAROUSEL
+$(document).ready(function(){
+  $('.carousel').carousel(
+  {
+    dist: 0,
+    padding: 0,
+    height:300, 
+    fullWidth: true,
+    indicators: true,
+    duration: 100,
+  }
+  );
+});
+
+autoplay()   
+function autoplay() {
+   
+    setTimeout(autoplay, 4500);
+}</script></body>
+</html>
+

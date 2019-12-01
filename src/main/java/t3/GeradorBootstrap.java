@@ -176,7 +176,13 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitFooter(convorkParser.FooterContext ctx) {
-        return super.visitFooter(ctx);
+        sp.printCode("<footer>");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</footer>");
+
+        return null;
     }
 
     @Override
@@ -197,7 +203,7 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
-        sp.printCode("</ul><form class=\"form-inline\">\n" +
+        sp.printCode("</ul><form class=\"form-inline\" >\n" +
                 "    <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n" +
                 "    <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Search</button>\n" +
                 "  </form>");
@@ -245,7 +251,12 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitContainer_element(convorkParser.Container_elementContext ctx) {
-        return super.visitContainer_element(ctx);
+        sp.printCode("<div class=\"container\">");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</div>");
+        return null;
     }
 
     @Override
