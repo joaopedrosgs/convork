@@ -134,8 +134,8 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitButton_element(convorkParser.Button_elementContext ctx) {
-        String color="";
-        String size="btn";
+        String color = "btn-primary";
+        String size = null;
         if(ctx.colorParameter(0)!=null) {
             color = ButtonColor.get(ctx.colorParameter(0).CADEIA().getText().substring(1, ctx.colorParameter(0).CADEIA().getText().length() - 1));
         }
@@ -152,7 +152,11 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
             sp.printCode("</a>\n" +
                     "      </li>");
         } else {
-            sp.printCode("  <button type=\"button\" class=\"btn btn-primary\">\n\n");
+            sp.printCode("  <button type=\"button\" class=\"btn "+ color);
+            if (size != null) {
+                sp.printCode(" " + size);
+            }
+            sp.printCode("\">\n\n");
             for (convorkParser.ElementContext element : ctx.element()) {
                 visitElement(element);
             }
