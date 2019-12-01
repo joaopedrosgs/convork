@@ -2,23 +2,13 @@ header() {
   logo() {
     text("Logo");
   };
+  button(color = "primary") {
+    text("Suporte");
+  };
   search() {};
 };
 content() {
-  section() {
-    row(spacing = "2") {
-      col() {
-        button(color = "primary") {
-          text("teste");
-        };
-      };
-      col() {
-        button(color = "secondary") {
-          text("teste2");
-        };
-      };
-    };
-  };
+
   section() {
     carousel() {
       image(href = "795-600x300.jpg");
@@ -26,27 +16,56 @@ content() {
       image(href = "795-600x300.jpg");
     };
   };
-};
-footer() {
-  container() {
   section() {
     row() {
-      col() {
-        button(color = "primary") {
-          text("teste");
-        };
+      col(spacing = "8") {
+        text("Algum texto qualquer");
       };
-      col(spacing = "2") {
-        button(color = "primary" size="large") {
-          text("teste2");
+      col(spacing = "4") {
+        button(color = "secondary") {
+          text("Link rapido 1");
         };
-      };
-    };
-    row() {
-      col() {
-        text("teste");
+        button(color = "secondary") {
+          text("Link rapido 2");
+        };
+        button(color = "secondary") {
+          text("Link rapido 3");
+        };
+        button(color = "secondary") {
+          text("Link rapido 4");
+        };
+        button(color = "secondary") {
+          text("Link rapido 5");
+        };
+        button(color = "secondary") {
+          text("Link rapido 6");
+        };
+
       };
     };
   };
+};
+footer() {
+  container() {
+    section() {
+      row() {
+        col(spacing = "8") {
+          text("Todos os direitos reservados");
+        };
+        col(spacing = "2") {
+          button(color = "info"
+            size = "normal") {
+            text("Contato");
+          };
+        };
+        col(spacing = "2") {
+          button(color = "info"
+            size = "normal") {
+            text("Inicio");
+          };
+        };
+      };
+
+    };
   };
 };
