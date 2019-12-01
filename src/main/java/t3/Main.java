@@ -57,7 +57,12 @@ public class Main {
             case "bootstrap": {
                 GeradorBootstrap gb = new GeradorBootstrap(sp);
                 gb.visitProgram(arvore);
-
+break;
+            }
+            case "foundation": {
+                GeradorFoundation gb = new GeradorFoundation(sp);
+                gb.visitProgram(arvore);
+                break;
             }
         }
 
