@@ -100,7 +100,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
             visitElement(element);
         }
         sp.printCode(" <div>\n" +
-                "  </nav>");
+                "  </nav>\n");
 
 
         return null;
@@ -155,7 +155,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode("</footer>");
+        sp.printCode("</footer>\n");
         return null;
     }
 
@@ -170,7 +170,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode("</a>");
+        sp.printCode("</a>\n");
         return null;
     }
 
@@ -217,43 +217,60 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitCard_element(convorkParser.Card_elementContext ctx) {
-        return super.visitCard_element(ctx);
+
+        sp.printCode("<div class=\"card\">\n");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</div>\n");
+        return null;
+
     }
 
     @Override
     public Void visitContainer_element(convorkParser.Container_elementContext ctx) {
-        sp.printCode("<div class=\"container\">");
+        sp.printCode("<div class=\"container\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode("</div>");
+        sp.printCode("</div>\n");
         return null;
     }
 
     @Override
     public Void visitSection_element(convorkParser.Section_elementContext ctx) {
-        sp.printCode("<div class=\"section\">");
+        sp.printCode("<div class=\"section\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode("</div>");
+        sp.printCode("</div>\n");
         return null;
 
     }
 
     @Override
     public Void visitRow_element(convorkParser.Row_elementContext ctx) {
-        sp.printCode("<div class=\"row\">");
+        String spacing = "";
+        if(ctx.spacingParameter()!=null) {
+            spacing += 's';
+            spacing += ctx.spacingParameter().CADEIA().getText().substring(1,ctx.spacingParameter().CADEIA().getText().length()-1);
+        }
+        sp.printCode("<div class=\"row "+spacing+"\">\n");
         for (convorkParser.Col_elementContext element : ctx.col_element()) {
             visitCol_element(element);
         }
-        sp.printCode("</div>");
+        sp.printCode("</div>\n");
         return null;
     }
 
     @Override
     public Void visitCol_element(convorkParser.Col_elementContext ctx) {
-        sp.printCode("<div class=\"col\">");
+        String spacing = "";
+        if(ctx.spacingParameter()!=null) {
+            spacing += 's';
+            spacing += ctx.spacingParameter().CADEIA().getText().substring(1,ctx.spacingParameter().CADEIA().getText().length()-1);
+        }
+        sp.printCode("<div class=\"col "+spacing+"\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -263,6 +280,10 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitImage_element(convorkParser.Image_elementContext ctx) {
-        return super.visitImage_element(ctx);
+        sp.printCode("<img src=");
+        sp.printCode(ctx.hrefParameter().CADEIA().getText());
+        sp.printCode(">");
+        return null;
+
     }
 }

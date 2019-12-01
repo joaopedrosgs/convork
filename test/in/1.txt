@@ -6,14 +6,14 @@ header() {
 };
 content() {
   section() {
-    row() {
+    row(spacing = "2") {
       col() {
         button(color = "primary") {
           text("teste");
         };
       };
       col() {
-        button(color = "primary") {
+        button(color = "secondary") {
           text("teste2");
         };
       };
@@ -36,7 +36,7 @@ footer() {
           text("teste");
         };
       };
-      col() {
+      col(spacing = "2") {
         button(color = "primary" size="large") {
           text("teste2");
         };
