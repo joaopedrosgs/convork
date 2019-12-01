@@ -216,7 +216,7 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
                         "    <div class=\"carousel-item");
             }
             sp.printCode("\">\n" +
-            "    <img class=\"d-block w-100\" src=\""+ "https://cdn4.buysellads.net/uu/1/41312/1545083324-1539370929-mailchimp-Yellow-260x200.png" +"\" alt=\"First slide\">\n" +
+            "    <img class=\"d-block w-100\" src="+ image.image_element().hrefParameter().CADEIA().getText() +" alt=\"First slide\">\n" +
             "    </div>\n");
         }
         sp.printCode(
@@ -242,6 +242,17 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
     @Override
     public Void visitContainer_element(convorkParser.Container_elementContext ctx) {
         return super.visitContainer_element(ctx);
+    }
+
+    @Override
+    public Void visitSection_element(convorkParser.Section_elementContext ctx) {
+        sp.printCode("<div class=\"section\">");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</div>");
+        return null;
+
     }
 
     @Override
