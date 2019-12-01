@@ -3,20 +3,40 @@ package t3;
 import gen.convorkBaseVisitor;
 import gen.convorkParser;
 
+import java.util.HashMap;
+
 public class GeradorBootstrap extends convorkBaseVisitor<Void> {
     private PilhaDeTabelas pilhaDeTabelas;
 
     private SaidaParser sp;
     private StringBuilder script;
+    private HashMap<String, String> ButtonColor;
+    private HashMap<String, String> ButtonSize;
     private Integer carouselCount = 0;
 
     public GeradorBootstrap(SaidaParser sp) {
         this.sp = sp;
         script = new StringBuilder();
+        ButtonSize = new HashMap<String,String>();
+        ButtonSize.put("small", "btn-sm");
+        ButtonSize.put("normal", "btn");
+        ButtonSize.put("medium", "btn");
+        ButtonSize.put("large", "btn-lg");
+        ButtonColor = new HashMap<String,String>();
+        ButtonColor.put("primary", "btn-primary");
+        ButtonColor.put("secondary", "btn-secondary");
+        ButtonColor.put("success", "btn-success");
+        ButtonColor.put("danger", "btn-danger");
+        ButtonColor.put("warning", "btn-warning");
+        ButtonColor.put("info", "btn-info");
+        ButtonColor.put("light", "btn-light");
+        ButtonColor.put("dark", "dark");
     }
 
     @Override
     public Void visitProgram(convorkParser.ProgramContext ctx) {
+
+
         sp.printCode("<!doctype html>\n" +
                 "<html lang=\"en\">\n" +
                 "  <head>\n" +
@@ -75,12 +95,23 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitHeader(convorkParser.HeaderContext ctx) {
-        sp.printCode(" <nav>\n" +
-                "    <div class=\"nav-wrapper\">\n");
-        for (convorkParser.ElementContext element : ctx.element()) {
-            visitElement(element);
+        sp.printCode("<nav class=\"navbar navbar-expand-lg navbar-dark bg-primary\">\n");
+        if (ctx.element(0).logo_element() != null) {
+            visitElement(ctx.element(0));
         }
-        sp.printCode("</div>\n" +
+
+        sp.printCode("  <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n" +
+                     "    <span class=\"navbar-toggler-icon\"></span>\n" +
+                     "  </button>" +
+                     "  <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n" +
+                     "    <ul class=\"navbar-nav mr-auto\">");
+        for (convorkParser.ElementContext element : ctx.element()) {
+            if (element.logo_element() == null) {
+                visitElement(element);
+            }
+        }
+        sp.printCode("    </ul>\n" +
+                "  </div>\n" +
                 "  </nav>");
 
 
@@ -103,12 +134,30 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitButton_element(convorkParser.Button_elementContext ctx) {
-
-        sp.printCode("  <button type=\"button\" class=\"btn btn-primary\">\n\n");
-        for (convorkParser.ElementContext element : ctx.element()) {
-            visitElement(element);
+        String color="";
+        String size="btn";
+        if(ctx.colorParameter(0)!=null) {
+            color = ButtonColor.get(ctx.colorParameter(0).CADEIA().getText().substring(1, ctx.colorParameter(0).CADEIA().getText().length() - 1));
         }
-        sp.printCode("</button>\n");
+        if(ctx.sizeParameter(0)!=null) {
+            size = ButtonSize.get(ctx.sizeParameter(0).CADEIA().getText().substring(1, ctx.sizeParameter(0).CADEIA().getText().length() - 1));
+        }
+
+        if(ctx.getParent().getParent().getClass() == convorkParser.HeaderContext.class) {
+            sp.printCode("<li class=\"nav-item\">\n" +
+                    "<a class=\"nav-link\" href=\"#\">");
+            for (convorkParser.ElementContext element : ctx.element()) {
+                visitElement(element);
+            }
+            sp.printCode("</a>\n" +
+                    "      </li>");
+        } else {
+            sp.printCode("  <button type=\"button\" class=\"btn btn-primary\">\n\n");
+            for (convorkParser.ElementContext element : ctx.element()) {
+                visitElement(element);
+            }
+            sp.printCode("</button>\n");
+        }
 
         return null;
     }
@@ -133,54 +182,21 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitLogo_element(convorkParser.Logo_elementContext ctx) {
-        sp.printCode("<a class=\"navbar-brand\" href=\"#\">Navbar</a>\n" +
-                "\n" +
-                "      <!-- Collapse button -->\n" +
-                "      <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#basicExampleNav\" aria-controls=\"basicExampleNav\"\n" +
-                "        aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n" +
-                "        <span class=\"navbar-toggler-icon\"></span>\n" +
-                "      </button>\n" +
-                "\n" +
-                "      <!-- Collapsible content -->\n" +
-                "      <div class=\"collapse navbar-collapse\" id=\"basicExampleNav\">\n" +
-                "\n" +
-                "        <!-- Links -->\n" +
-                "        <ul class=\"navbar-nav mr-auto\">\n" +
-                "          <li class=\"nav-item active\">\n" +
-                "            <a class=\"nav-link\" href=\"#\">Home\n" +
-                "              <span class=\"sr-only\">(current)</span>\n" +
-                "            </a>\n" +
-                "          </li>\n" +
-                "          <li class=\"nav-item\">\n" +
-                "            <a class=\"nav-link\" href=\"#\">Features</a>\n" +
-                "          </li>\n" +
-                "          <!-- Dropdown -->\n" +
-                "          <li class=\"nav-item dropdown\">\n" +
-                "            <a class=\"nav-link dropdown-toggle\" id=\"navbarDropdownMenuLink1\" data-toggle=\"dropdown\" aria-haspopup=\"true\"\n" +
-                "              aria-expanded=\"false\">Dropdown 1</a>\n" +
-                "            <div class=\"dropdown-menu dropdown-primary\" aria-labelledby=\"navbarDropdownMenuLink1\">\n" +
-                "              <a class=\"dropdown-item\" href=\"#\">Action</a>\n" +
-                "              <a class=\"dropdown-item\" href=\"#\">Another action</a>\n" +
-                "              <a class=\"dropdown-item\" href=\"#\">Something else here</a>\n" +
-                "            </div>\n" +
-                "          </li>\n" +
-                "\n" +
-                "        </ul>\n");
+
+        sp.printCode("  <a class=\"navbar-brand\" href=\"#\">");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        //sp.printCode("</a>");
-
+        sp.printCode("</a>");
         return null;
     }
 
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
-        sp.printCode("<form class=\"form-inline\">\n" +
-                "          <div class=\"md-form my-0\">\n" +
-                "            <input class=\"form-control mr-sm-2\" type=\"text\" placeholder=\"Search\" aria-label=\"Search\">\n" +
-                "          </div>\n" +
-                "        </form>");
+        sp.printCode("</ul><form class=\"form-inline\">\n" +
+                "    <input class=\"form-control mr-sm-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n" +
+                "    <button class=\"btn btn-outline-light my-2 my-sm-0\" type=\"submit\">Search</button>\n" +
+                "  </form>");
         return null;
     }
 
