@@ -107,6 +107,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
                 visitElement(element);
             }
         }
+        sp.printCode("</ul>");
         sp.printCode("\n</div>\n" +
                 "  </nav>\n");
 
@@ -195,7 +196,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
         sp.printCode(
-                "      </ul>\n<form style=\"margin-left:200px;\">\n" +
+                "      \n<form style=\"margin-left:200px;\">\n" +
                 "        <div class=\"input-field\" style=\"max-width:200px;\">\n" +
                 "          <input id=\"search\" type=\"search\"  required>\n" +
                 "          <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n" +
