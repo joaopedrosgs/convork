@@ -12,7 +12,7 @@ public class Args {
     @Parameter(names = "-out", description = "Arquivo de destino")
     public String out = "out.html";
 
-    @Parameter(names = "-target", description = "Framework escolhida, atualmente permite apenas material")
+    @Parameter(names = "-target", description = "Framework escolhida")
     public String target = "material";
 
 

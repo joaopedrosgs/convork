@@ -113,7 +113,7 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     public String visitLogo_element(convorkParser.Logo_elementContext ctx) {
         for(convorkParser.ElementContext element : ctx.element())  {
             if(element.image_element()==null && element.text_element()==null) {
-                sp.print("Linha "+element.start.getLine()+": Logo não pode possuir filhos que não são text ou imagem");
+                sp.println("Linha "+element.start.getLine()+": Logo não pode possuir filhos que não são text ou imagem");
             }
             visitElement(element);
         }
@@ -162,7 +162,7 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
 
         for(convorkParser.ElementContext element : ctx.element())  {
             if(element.text_element()==null ) {
-                sp.print("Linha "+element.start.getLine()+": Botão deve possuir apenas texto");
+                sp.println("Linha "+element.start.getLine()+": Botão deve possuir apenas texto");
             }
             visitElement(element);
         }
@@ -178,7 +178,7 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     public String visitCarousel_element(convorkParser.Carousel_elementContext ctx) {
         for(convorkParser.ElementContext element : ctx.element())  {
             if(element.image_element()==null) {
-                sp.print("Linha "+element.start.getLine()+": Carrossel deve possuir apenas imagens");
+                sp.println("Linha "+element.start.getLine()+": Carrossel deve possuir apenas imagens");
             }
             visitElement(element);
         }
@@ -208,7 +208,7 @@ public class AnalisadorSemantico extends convorkBaseVisitor<String> {
     @Override
     public String visitSpacingParameter(convorkParser.SpacingParameterContext ctx) {
         if(!isNumeric(ctx.CADEIA().getText().substring(1,ctx.CADEIA().getText().length()-1))) {
-            sp.print("Linha "+ctx.start.getLine()+": o parametro 'spacing' deve possuir um valor numérico");
+            sp.println("Linha "+ctx.start.getLine()+": o parametro 'spacing' deve possuir um valor numérico");
         }
         return "";
     }

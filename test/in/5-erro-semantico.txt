@@ -1,0 +1,12 @@
+content() {
+    section() {
+        row() {
+            col(spacing = "large"){
+                text("coluna 1");
+            };
+            col(spacing = "large"){
+                text("coluna 2");
+            };
+        };
+    };
+};
