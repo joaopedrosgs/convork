@@ -170,7 +170,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
     @Override
     public Void visitFooter(convorkParser.FooterContext ctx) {
 
-        sp.printCode(" <footer class=\"page-footer\">\n");
+        sp.printCode(" <footer class=\"page-footer  blue-grey lighten-3\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -185,7 +185,7 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitLogo_element(convorkParser.Logo_elementContext ctx) {
-        sp.printCode("<a id='logo-container' href=\"#\" class=\"brand-logo\">\n");
+        sp.printCode("<a id='logo-container' style='padding-left:20px   ' href=\"#\" class=\"brand-logo\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -196,13 +196,13 @@ public class GeradorMaterial extends convorkBaseVisitor<Void> {
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
         sp.printCode(
-                "      \n<form style=\"margin-left:200px;\">\n" +
+                "    <li>  \n<form style=\"margin-left:200px;\">\n" +
                 "        <div class=\"input-field\" style=\"max-width:200px;\">\n" +
                 "          <input id=\"search\" type=\"search\"  required>\n" +
                 "          <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n" +
                 "          <i class=\"material-icons\">close</i>\n" +
                 "        </div>\n" +
-                "      </form>");
+                "      </form></li>");
         return null;
     }
 
