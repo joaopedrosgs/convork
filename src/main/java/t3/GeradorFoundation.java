@@ -198,7 +198,7 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
-        sp.printCode("     <input type=\"search\" placeholder=\"Search\">");
+        sp.printCode("     <input style='margin-left:1rem;' type=\"search\" placeholder=\"Search\">");
         return null;
     }
 
@@ -250,7 +250,7 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitSection_element(convorkParser.Section_elementContext ctx) {
-        sp.printCode("<div class=\"grid-container\">\n");
+        sp.printCode("<div class=\"grid-container grid-padding-y\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -281,7 +281,7 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
             spacing += "small-";
             spacing += ctx.spacingParameter().CADEIA().getText().substring(1, ctx.spacingParameter().CADEIA().getText().length() - 1);
         }
-        sp.printCode("<div class=\"cell " + spacing + "\">\n");
+        sp.printCode("<div class=\"cell  " + spacing + "\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
