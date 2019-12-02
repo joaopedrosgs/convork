@@ -96,13 +96,29 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitHeader(convorkParser.HeaderContext ctx) {
-        sp.printCode(" <nav class='light-blue' role='navigation'>\n" +
-                "    <div class=\"nav-wrapper container\">\n");
-        for (convorkParser.ElementContext element : ctx.element()) {
-            visitElement(element);
+        sp.printCode(" <div class='top-bar'>\n");
+        sp.printCode(" <div class=\"top-bar-left\">\n" +
+                "    <ul class=\"dropdown menu\" data-dropdown-menu>");
+        if (ctx.element(0).logo_element() != null) {
+            sp.printCode("<li class=\"menu-text\">");
+            visitElement(ctx.element(0));
+            sp.printCode("</li>  </ul>\n" +
+                    "  </div>");
         }
-        sp.printCode(" </div>\n" +
-                "  </nav>\n");
+
+        sp.printCode("<div class=\"top-bar-right\">\n" +
+                "    <ul class=\"menu\">");
+
+        for (convorkParser.ElementContext element : ctx.element()) {
+            if (element.logo_element() != null) continue;
+
+                sp.printCode("<li>");
+            visitElement(element);
+            sp.printCode("</li>");
+        }
+        sp.printCode("  </ul>\n" +
+                "  </div>" +
+                "  </div>\n");
 
 
         return null;
@@ -111,11 +127,9 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
     @Override
     public Void visitContent(convorkParser.ContentContext ctx) {
 
-        sp.printCode("<div class='content container'>\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
-        sp.printCode("</div>\n");
 
 
         return null;
@@ -153,10 +167,16 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
     @Override
     public Void visitFooter(convorkParser.FooterContext ctx) {
 
-        sp.printCode(" <footer class=\"page-footer\">\n");
+        sp.printCode(" <footer class=\"callout large secondary\">\n");
+        sp.printCode("<div class='grid-container grid-x'>");
+
         for (convorkParser.ElementContext element : ctx.element()) {
+            sp.printCode("<div class='cell'>");
             visitElement(element);
+            sp.printCode("</div>");
+
         }
+        sp.printCode("</div>");
         sp.printCode("</footer>\n");
         return null;
     }
@@ -178,13 +198,7 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitSearch_element(convorkParser.Search_elementContext ctx) {
-        sp.printCode("<div class='right nav-wrapper'><form>\n" +
-                "        <div class=\"input-field\">\n" +
-                "          <input id=\"search\" type=\"search\" required>\n" +
-                "          <label class=\"label-icon\" for=\"search\"><i class=\"material-icons\">search</i></label>\n" +
-                "          <i class=\"material-icons\">close</i>\n" +
-                "        </div>\n" +
-                "      </form></div>");
+        sp.printCode("     <input type=\"search\" placeholder=\"Search\">");
         return null;
     }
 
@@ -226,7 +240,7 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitContainer_element(convorkParser.Container_elementContext ctx) {
-        sp.printCode("<div class=\"container\">\n");
+        sp.printCode("<div class=\"cell\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -236,7 +250,7 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitSection_element(convorkParser.Section_elementContext ctx) {
-        sp.printCode("<div class=\"section\">\n");
+        sp.printCode("<div class=\"grid-container\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -249,10 +263,10 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
     public Void visitRow_element(convorkParser.Row_elementContext ctx) {
         String spacing = "";
         if (ctx.spacingParameter() != null) {
-            spacing += 's';
+            spacing += "small-";
             spacing += ctx.spacingParameter().CADEIA().getText().substring(1, ctx.spacingParameter().CADEIA().getText().length() - 1);
         }
-        sp.printCode("<div class=\"row " + spacing + "\">\n");
+        sp.printCode("<div class=\"grid-x " + spacing + "\">\n");
         for (convorkParser.Col_elementContext element : ctx.col_element()) {
             visitCol_element(element);
         }
@@ -267,7 +281,7 @@ public class GeradorFoundation extends convorkBaseVisitor<Void> {
             spacing += "small-";
             spacing += ctx.spacingParameter().CADEIA().getText().substring(1, ctx.spacingParameter().CADEIA().getText().length() - 1);
         }
-        sp.printCode("<div class=\"columns " + spacing + "\">\n");
+        sp.printCode("<div class=\"cell " + spacing + "\">\n");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
