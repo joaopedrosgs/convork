@@ -3,8 +3,14 @@ header() {
     text("Logo");
   };
   button(color = "primary") {
-    text("Suporte");
+    text("Inicio");
   };
+   button(color = "primary") {
+      text("Sobre");
+    };
+     button(color = "primary") {
+        text("Suporte");
+      };
   search() {};
 };
 content() {
@@ -17,7 +23,7 @@ content() {
   section() {
     row() {
       col(spacing = "8") {
-        text("Algum texto qualquer");
+        text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra magna sit amet interdum vehicula. Vivamus vel maximus nibh. Suspendisse gravida vulputate arcu vel placerat. Aenean semper venenatis congue. Aenean at elit metus. Maecenas sollicitudin pretium lectus. Phasellus auctor dui id neque posuere, vitae consectetur diam finibus. Suspendisse a purus felis. Aliquam non nunc ac ipsum rhoncus malesuada vel et tellus. Vestibulum purus arcu, gravida in nisi a, ornare venenatis lectus. Aenean convallis facilisis ipsum, a consectetur tellus ullamcorper faucibus. Suspendisse dapibus, magna ut sodales venenatis, magna leo posuere dolor, non tincidunt ex justo nec leo. Sed quis lacinia nunc. ");
       };
       col(spacing = "4") {
         button(color = "secondary") {
