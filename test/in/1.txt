@@ -5,46 +5,63 @@ header() {
   button(color = "primary") {
     text("Inicio");
   };
-   button(color = "primary") {
-      text("Sobre");
-    };
-     button(color = "primary") {
-        text("Suporte");
-      };
+  button(color = "primary") {
+    text("Sobre");
+  };
+  button(color = "primary") {
+    text("Suporte");
+  };
   search() {};
 };
 content() {
-    carousel() {
-      image(href = "795-600x300.jpg");
-      image(href = "795-600x300.jpg");
-      image(href = "795-600x300.jpg");
+  carousel() {
+    image(href = "795-600x300.jpg");
+    image(href = "795-600x300.jpg");
+    image(href = "795-600x300.jpg");
 
   };
   section() {
     row() {
       col(spacing = "8") {
-        text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra magna sit amet interdum vehicula. Vivamus vel maximus nibh. Suspendisse gravida vulputate arcu vel placerat. Aenean semper venenatis congue. Aenean at elit metus. Maecenas sollicitudin pretium lectus. Phasellus auctor dui id neque posuere, vitae consectetur diam finibus. Suspendisse a purus felis. Aliquam non nunc ac ipsum rhoncus malesuada vel et tellus. Vestibulum purus arcu, gravida in nisi a, ornare venenatis lectus. Aenean convallis facilisis ipsum, a consectetur tellus ullamcorper faucibus. Suspendisse dapibus, magna ut sodales venenatis, magna leo posuere dolor, non tincidunt ex justo nec leo. Sed quis lacinia nunc. ");
+        row() {
+          col() {
+            text("Conteudo");
+          };
+        };
+        row() {
+          col() {
+            text("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque pharetra magna sit amet interdum vehicula. Vivamus vel maximus nibh. Suspendisse gravida vulputate arcu vel placerat. Aenean semper venenatis congue. Aenean at elit metus. Maecenas sollicitudin pretium lectus. Phasellus auctor dui id neque posuere, vitae consectetur diam finibus. Suspendisse a purus felis. Aliquam non nunc ac ipsum rhoncus malesuada vel et tellus. Vestibulum purus arcu, gravida in nisi a, ornare venenatis lectus. Aenean convallis facilisis ipsum, a consectetur tellus ullamcorper faucibus. Suspendisse dapibus, magna ut sodales venenatis, magna leo posuere dolor, non tincidunt ex justo nec leo. Sed quis lacinia nunc. ");
+          };
+        };
       };
       col(spacing = "4") {
-        button(color = "secondary") {
-          text("Link rapido 1");
+        row() {
+          col() {
+            text("Links rapidos");
+          };
         };
-        button(color = "secondary") {
-          text("Link rapido 2");
+        row() {
+          col() {
+            button(color = "secondary") {
+              text("Link rapido 1");
+            };
+            button(color = "secondary") {
+              text("Link rapido 2");
+            };
+            button(color = "secondary") {
+              text("Link rapido 3");
+            };
+            button(color = "secondary") {
+              text("Link rapido 4");
+            };
+            button(color = "secondary") {
+              text("Link rapido 5");
+            };
+            button(color = "secondary") {
+              text("Link rapido 6");
+            };
+          };
         };
-        button(color = "secondary") {
-          text("Link rapido 3");
-        };
-        button(color = "secondary") {
-          text("Link rapido 4");
-        };
-        button(color = "secondary") {
-          text("Link rapido 5");
-        };
-        button(color = "secondary") {
-          text("Link rapido 6");
-        };
-
       };
     };
   };
