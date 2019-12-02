@@ -1,0 +1,10 @@
+content() {
+    section() {
+        row() {
+            text("coluna 1");
+            col(){
+                text("coluna 2");
+            };
+        };
+    };
+};

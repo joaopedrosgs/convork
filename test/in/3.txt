@@ -1,0 +1,12 @@
+content() {
+    section() {
+        row() {
+            col(spacing = "4"){
+                text("coluna 1");
+            };
+            col(spacing = "4"){
+                text("coluna 2");
+            };
+        };
+    };
+};
