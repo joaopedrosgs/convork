@@ -176,7 +176,7 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
 
     @Override
     public Void visitFooter(convorkParser.FooterContext ctx) {
-        sp.printCode("<footer>");
+        sp.printCode("<footer class=\"bg-secondary\">");
         for (convorkParser.ElementContext element : ctx.element()) {
             visitElement(element);
         }
@@ -268,6 +268,37 @@ public class GeradorBootstrap extends convorkBaseVisitor<Void> {
         sp.printCode("</div>");
         return null;
 
+    }
+
+    @Override
+    public Void visitRow_element(convorkParser.Row_elementContext ctx) {
+        String spacing = "";
+
+        sp.printCode("<div class=\"row\">\n");
+        for (convorkParser.Col_elementContext element : ctx.col_element()) {
+            visitCol_element(element);
+        }
+        sp.printCode("</div>\n");
+        return null;
+    }
+
+    @Override
+    public Void visitCol_element(convorkParser.Col_elementContext ctx) {
+        String spacing = "";
+        if(ctx.spacingParameter()!=null) {
+            spacing += ctx.spacingParameter().CADEIA().getText().substring(1,ctx.spacingParameter().CADEIA().getText().length()-1);
+        }
+        if (spacing != "") {
+            sp.printCode("<div class=\"col-" + spacing + "\">\n");
+        } else {
+            sp.printCode("<div class=\"col\">\n");
+        }
+
+        for (convorkParser.ElementContext element : ctx.element()) {
+            visitElement(element);
+        }
+        sp.printCode("</div>");
+        return null;
     }
 
     @Override
