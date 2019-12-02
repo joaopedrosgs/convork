@@ -8,13 +8,11 @@ header() {
   search() {};
 };
 content() {
-
-  section() {
     carousel() {
       image(href = "795-600x300.jpg");
       image(href = "795-600x300.jpg");
       image(href = "795-600x300.jpg");
-    };
+
   };
   section() {
     row() {
